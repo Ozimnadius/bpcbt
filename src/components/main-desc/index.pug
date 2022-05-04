@@ -1,0 +1,43 @@
+.main-desc
+    .main-desc__grid
+        .main-desc__left
+            h2.main-desc__title
+                span.color-blue БПЦ&nbsp;
+                span в России
+            .main-desc__bottom
+                .main-desc__content
+                    p Мы разрабатываем и внедряем цифровые платформы для платежных сервисов. Поставляем готовые решения, разрабатываем кастомизированные версии, предоставляем услугу как сервис.
+                a(href="#feed").btn Обсудить проект
+                .main-desc__map
+                    img(src="/images/content/main-desc/map.svg" alt="lorem")
+                    .main-desc__map-title.
+                        27 лет <br> рынке
+
+        .main-desc__right
+            .main-desc__items
+                -
+                    var arr = [
+                        {
+                            img: '/images/content/main-desc/office.svg',
+                            val: '6',
+                            txt: 'Офисов'
+                        },
+                        {
+                            img: '/images/content/main-desc/man.svg',
+                            val: '850',
+                            txt: 'Сотрудников'
+                        },
+                        {
+                            img: '/images/content/main-desc/map-icon.svg',
+                            val: '100%',
+                            txt: 'Собственная российская разработка'
+                        }
+                    ];
+                each i in arr
+                    .main-desc__item
+                        .main-desc__item-left
+                            .main-desc__item-img
+                                img(src=i.img alt=i.val)
+                        .main-desc__item-right
+                            .main-desc__item-val= i.val
+                            .main-desc__item-txt= i.txt

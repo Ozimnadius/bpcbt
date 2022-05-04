@@ -1,0 +1,22 @@
+.brands
+    h2.brands__title.
+        Нам доверяют ведущие<br>Российские компании
+    -
+        var arr = [1,2,3,4,5,6,7,8,9,10];
+    .brands__list
+        .brands__animate
+            .brands__track
+                each i in arr
+                    .brands__item
+                        img(src=`images/content/brands/${i}.png` alt="brand")
+                each i in arr
+                    .brands__item
+                        img(src=`images/content/brands/${i}.png` alt="brand")
+        .brands__animate.brands__animate--reverse
+            .brands__track
+                each i in arr
+                    .brands__item
+                        img(src=`images/content/brands/${i}.png` alt="brand")
+                each i in arr
+                    .brands__item
+                        img(src=`images/content/brands/${i}.png` alt="brand")

@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <!--link(rel="manifest" href="/images/favicon/site.webmanifest")-->
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/css/libs.css">
@@ -21,40 +21,598 @@
   </head>
   <body>
     <div class="wrapper">
-      <!--.wrapper__header-->
-      <div class="wrapper__content">
-        <main class="page"></main>
+      <div class="wrapper__header">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__grid">
+              <div class="header__left">
+                <div class="header__logo"><a href="/"><img src="/images/content/logo.svg" alt="logo"></a></div>
+              </div>
+              <div class="header__center">
+                <nav class="nav">
+                  <div class="nav__item"><a class="nav__link"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+</svg><span>Направления</span></a>
+                    <div class="nav__drop">
+                      <div class="subnav"><a class="subnav__item" href="/services/payment/">
+                          <div class="subnav__title">Платежи / процессинг / биллинг</div>
+                          <ul class="subnav__ul">
+                            <li class="subnav__li">Выпуск и обслуживание карт (дебитные, кредитные, виртуальные и т.д.)</li>
+                            <li class="subnav__li">Расчеты с торговыми точками</li>
+                            <li class="subnav__li">Управлением терминальной сетью предприятия</li>
+                            <li class="subnav__li">Интеграция и расчеты с платежными системами / СБП</li>
+                          </ul></a><a class="subnav__item" href="/services/fraud/">
+                          <div class="subnav__title">Предотвращение мошенничества и оценка рисков</div>
+                          <ul class="subnav__ul">
+                            <li class="subnav__li">Мониторинг мошенничества по картам и терминалам</li>
+                            <li class="subnav__li">Мониторинг мошенничества для ДБО / СБП</li>
+                            <li class="subnav__li">Мониторинг мошенничества для АБС / AML</li>
+                            <li class="subnav__li">Омниканальный мониторинг мошенничества</li>
+                          </ul></a><a class="subnav__item" href="/services/transformation/">
+                          <div class="subnav__title">Цифровая трансформация каналов обслуживания</div>
+                          <ul class="subnav__ul">
+                            <li class="subnav__li">Мобильный и интернет банкинг</li>
+                            <li class="subnav__li">Агентский банкинг</li>
+                            <li class="subnav__li">Приложение и портал для мерчантов</li>
+                            <li class="subnav__li">Удаленное кредитование</li>
+                          </ul></a><a class="subnav__item" href="/services/ecosystems/">
+                          <div class="subnav__title">Экосистемы и цифровая трансформация</div>
+                          <ul class="subnav__ul">
+                            <li class="subnav__li">Маркетплейс</li>
+                            <li class="subnav__li">O-City</li>
+                            <li class="subnav__li">Электронное правительство</li>
+                            <li class="subnav__li">Цифровая экосистема сервисов / интеграционная платформа / API</li>
+                          </ul></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="/projects/"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+</svg><span>Проекты</span></a>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="/import/"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+</svg><span>Импортозамещение</span></a>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="/news/"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+</svg><span>Пресс-центр</span></a>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="/about/"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+</svg><span>О компании</span></a>
+                  </div>
+                </nav>
+              </div>
+              <div class="header__right">
+                <div class="header__search">
+                  <form class="search">
+                    <button class="search__icon" type="submit"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.0284 12.0266L18 18M13.862 7.43291C13.862 10.9857 10.9827 13.8658 7.43099 13.8658C3.87925 13.8658 1 10.9857 1 7.43291C1 3.88011 3.87925 1 7.43099 1C10.9827 1 13.862 3.88011 13.862 7.43291Z" stroke="#7C7C7C" stroke-width="2"/>
+</svg>
+                    </button>
+                    <input class="search__input" type="search" name="search" placeholder="Поиск">
+                  </form>
+                </div>
+                <div class="header__link"><a href="#footer">Контакты</a></div>
+              </div>
+            </div>
+          </div>
+        </header>
       </div>
-      <div class="wrapper__footer"></div>
-    </div>
-    <div class="debug">
-      <div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div class="wrapper__content">
+        <main class="page">
+          <section class="page__section">
+            <div class="main-banner">
+              <div class="main-banner__img"><img src="images/content/main-banner/img.jpg" alt="Мы строим платформы для финансовых сервисов">
+                <div class="main-banner__animation">
+                  <div class="circles"><svg width="810" height="810" viewBox="0 0 810 810" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M675 405C675 255.883 554.117 135 405 135C255.883 135 135 255.883 135 405C135 465.289 154.76 520.962 188.156 565.897M665.829 475.031C634.985 590.198 529.896 675 405 675C383.358 675 362.31 672.454 342.141 667.644" stroke="#1B4ED1" stroke-width="0.84375"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 405 405" to="360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M405 135C324.493 135 252.216 170.235 202.749 226.125" stroke="white" stroke-width="3.375"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 405 405" to="360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M660 405C660 545.833 545.833 660 405 660M150 405C150 461.658 168.478 513.999 199.736 556.328" stroke="#1B4ED1" stroke-width="0.836066"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 405 405" to="-360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M352.096 201.72C368.998 197.334 386.726 195 405 195C520.98 195 615 289.02 615 405C615 444.76 603.95 481.939 584.754 513.635M210.76 325.038C200.603 349.685 195 376.688 195 405C195 435.336 201.432 464.17 213.008 490.212M228.532 518.885C265.935 576.722 330.997 615 405 615C451.194 615 493.903 600.085 528.577 574.808" stroke="#1B4ED1" stroke-width="0.807692"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="180s" from="0 405 405" to="360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M556.923 260.017C528.987 230.752 492.681 209.546 451.846 200.242M198.647 365.824C196.253 378.515 195 391.61 195 404.998C195 426.798 198.322 447.823 204.487 467.593" stroke="white" stroke-width="3.23077"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 405 405" to="-360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M405 560C319.396 560 250 490.604 250 405C250 319.396 319.396 250 405 250C490.604 250 560 319.396 560 405C560 469.289 520.86 524.436 465.11 547.914" stroke="#1B4ED1" stroke-width="0.756098"/>
+</g>
+<g>
+<path d="M265 405C265 482.32 327.68 545 405 545C482.32 545 545 482.32 545 405C545 327.68 482.32 265 405 265" stroke="#1B4ED1" stroke-width="0.736842"/>
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 405 405" to="-360 405 405" repeatCount="indefinite" / >
+</g>
+<g>
+<path d="M545 405C545 482.32 482.32 545 405 545" stroke="white" stroke-width="2.94737"/>
+</g>
+<g>
+<circle cx="405" cy="405" r="49.75" stroke="#1B4ED1" stroke-width="0.5"/>
+</g>
+</svg>
+                  </div>
+                </div>
+              </div>
+              <div class="main-banner__container">
+                <div class="main-banner__left">
+                  <div class="main-banner__content content">
+                    <h1>Мы строим платформы для финансовых сервисов</h1>
+                    <p><b>27 лет мы разрабатываем и внедряем уникальные цифровые платформы для платежных и финансовых сервисов в банках, госструктурах, крупном бизнесе.</b></p><a href="#feed">Обсудить проект</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__section">
+            <div class="container">
+              <div class="main-advs">
+                <div class="main-advs__item">
+                  <div class="main-adv">
+                    <div class="main-adv__img"><img src="/images/content/main-advs/inn.svg" alt="Инновации"></div>
+                    <h3 class="main-adv__title">Инновации</h3>
+                    <div class="main-adv__txt sub">Разрабатываем уникальный софт</div>
+                  </div>
+                </div>
+                <div class="main-advs__item">
+                  <div class="main-adv">
+                    <div class="main-adv__img"><img src="/images/content/main-advs/rel.svg" alt="Надежность"></div>
+                    <h3 class="main-adv__title">Надежность</h3>
+                    <div class="main-adv__txt sub">Высокий уровень отказоустойчивости</div>
+                  </div>
+                </div>
+                <div class="main-advs__item">
+                  <div class="main-adv">
+                    <div class="main-adv__img"><img src="/images/content/main-advs/speed.svg" alt="Скорость"></div>
+                    <h3 class="main-adv__title">Скорость</h3>
+                    <div class="main-adv__txt sub">Быстрый вывод на рынок</div>
+                  </div>
+                </div>
+                <div class="main-advs__item">
+                  <div class="main-adv">
+                    <div class="main-adv__img"><img src="/images/content/main-advs/safe.svg" alt="Безопасность"></div>
+                    <h3 class="main-adv__title">Безопасность</h3>
+                    <div class="main-adv__txt sub">Многоступенчатая защита данных</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__section">
+            <div class="main-about">
+              <div class="main-about__img"><img src="/images/content/main-about/img.png" alt="Кто мы"></div>
+              <div class="container">
+                <div class="main-about__container">
+                  <div class="main-about__wrap">
+                    <div class="main-about__content content">
+                      <h2>Кто мы</h2>
+                      <p>БПЦ Банковские технологии – ведущий российский разработчик платформ для платежных и финансовых сервисов. Мы входим в список аккредитованных организаций Министерства цифрового развития, связи и массовых коммуникаций РФ, имеем лицензии ФСБ и ФСТЭК. Наши продукты входят в Реестр отечественного ПО, поддерживают российские ОС и СУБД, регулярно проходят проверки на уязвимости.</p>
+                    </div>
+                    <div class="main-about__link link link--white"><a href="/about/"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 16L16 1M16 1V16M16 1H1" stroke="white" stroke-width="2"/>
+</svg><span>Читать подробнее</span></a></div>
+                    <div class="main-about__circles">
+                      <div class="circles-bg"><svg width="812" height="812" viewBox="0 0 812 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<g>
+<path d="M406 0.999982C629.675 0.999973 811 182.325 811 406M0.999982 406C0.999984 440.512 5.31671 474.015 13.4397 506M49.3145 598C117.725 724.822 251.798 811 406 811C565.811 811 704.003 718.437 769.889 584" stroke="white"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 406 406" to="360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M406 0.999982C629.675 0.999973 811 182.325 811 406C811 629.675 629.675 811 406 811C182.325 811 0.999992 629.675 0.999982 406C0.999973 182.325 182.325 0.999992 406 0.999982ZM406 588.664C506.882 588.664 588.664 506.882 588.664 406C588.664 305.117 506.882 223.336 406 223.336C305.117 223.336 223.336 305.117 223.336 406C223.336 506.882 305.117 588.664 406 588.664Z" fill="url(#paint0_linear_812_9739)" fill-opacity="0.43"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 406 406" to="360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M406 136C256.883 136 136 256.883 136 406C136 555.117 256.883 676 406 676C466.289 676 521.962 656.24 566.897 622.844M476.031 145.171C591.198 176.015 676 281.104 676 406C676 427.642 673.454 448.69 668.644 468.859" stroke="white" stroke-width="0.84375"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 406 406" to="360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M136 405.999C136 486.506 171.235 558.783 227.125 608.25" stroke="white" stroke-width="3.375"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 406 406" to="-360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M406 151C546.833 151 661 265.167 661 406M406 661C462.658 661 514.999 642.522 557.328 611.264" stroke="white" stroke-width="0.836066"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="180s" from="0 406 406" to="360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M202.72 458.904C198.334 442.002 196 424.274 196 406C196 290.02 290.02 196 406 196C445.76 196 482.939 207.05 514.635 226.246M326.038 600.24C350.685 610.397 377.688 616 406 616C436.336 616 465.17 609.568 491.212 597.992M519.885 582.468C577.722 545.065 616 480.003 616 406C616 359.806 601.085 317.097 575.808 282.423" stroke="white" stroke-width="0.807692"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 406 406" to="-360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M261.019 254.077C231.754 282.013 210.548 318.319 201.244 359.154M366.826 612.353C379.517 614.747 392.612 616 406 616C427.8 616 448.825 612.678 468.595 606.513" stroke="white" stroke-width="3.23077"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 406 406" to="-360 406 406" repeatCount="indefinite" / >--></g>
+<path d="M561.002 406C561.002 491.604 491.606 561 406.002 561C320.398 561 251.002 491.604 251.002 406C251.002 320.396 320.398 251 406.002 251C470.291 251 525.438 290.14 548.915 345.89" stroke="white" stroke-width="0.756098"/>
+<g>
+<path d="M406 546C483.32 546 546 483.32 546 406C546 328.68 483.32 266 406 266C328.68 266 266 328.68 266 406" stroke="white" stroke-width="0.736842"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="45s" from="0 406 406" to="360 406 406" repeatCount="indefinite" / >--></g>
+<g>
+<path d="M406 266C483.32 266 546 328.68 546 406" stroke="white" stroke-width="2.94737"/>
+                        <!--<animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="90s" from="0 406 406" to="-360 406 406" repeatCount="indefinite" / >--></g>
+<circle cx="405.998" cy="406" r="49.75" transform="rotate(-90 405.998 406)" stroke="white" stroke-width="0.5"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_812_9739" x1="811" y1="406" x2="0.999934" y2="406" gradientUnits="userSpaceOnUse">
+<stop offset="0.619792" stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__section">
+            <div class="container">
+              <div class="main-platforms">
+                <div class="main-platforms__top">
+                  <h2 class="main-platforms__title">Платформы</h2>
+                  <div class="main-platforms__link link"><a href="#feed"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 16L16 1M16 1V16M16 1H1" stroke="#1B4ED1" stroke-width="2"/>
+</svg><span>Обсудить проект</span></a></div>
+                </div>
+                <div class="main-platforms__bottom">
+                  <div class="platforms">
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/1.png" alt="Транзакционная  платформа "></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Транзакционная  платформа </h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Транзакционная  платформа </h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/2.png" alt="Интеграционная платформа"></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Интеграционная платформа</h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Интеграционная платформа</h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/3.png" alt="Аналитическая платформа"></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Аналитическая платформа</h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Аналитическая платформа</h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/4.png" alt="Цифровые экосистемы"></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Цифровые экосистемы</h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Цифровые экосистемы</h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/1.png" alt="Единая цифровая платформа для дистанционного банкинга"></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Единая цифровая платформа для дистанционного банкинга</h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Единая цифровая платформа для дистанционного банкинга</h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="platforms__item platform">
+                      <div class="platform__wrap">
+                        <div class="platform__grid">
+                          <div class="platform__left">
+                            <div class="platform__img"><img src="/images/content/platforms/2.png" alt="Платформа O-City"></div>
+                          </div>
+                          <div class="platform__right">
+                            <div class="platform__content content">
+                              <h3>Платформа O-City</h3>
+                              <p>Высокопроизводительный инструмент обработки финансовых сообщений, в рамках которого обеспечивается как обработка транзакций в режиме реального времени от внешних каналов, так и автоматизация процессов ведения клиентов, построения расчетов с торговыми точками и поставщиками услуг. На базе платформы возможна реализация широкого ряда проектов, включая функционал стандартного карточного/терминального бизнеса, предпроцессинг и розничные расчеты для банковских систем, построение систем лояльности и биллинга.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="platform__btn">
+                        <div class="platform__grid">
+                          <div class="platform__left"></div>
+                          <div class="platform__right">
+                            <h3>Платформа O-City</h3>
+                          </div>
+                          <div class="platform__arr"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+</svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__section">
+            <div class="container">
+              <div class="main-desc">
+                <div class="main-desc__grid">
+                  <div class="main-desc__left">
+                    <h2 class="main-desc__title"><span class="color-blue">БПЦ&nbsp;</span><span>в России</span></h2>
+                    <div class="main-desc__bottom">
+                      <div class="main-desc__content">
+                        <p>Мы разрабатываем и внедряем цифровые платформы для платежных сервисов. Поставляем готовые решения, разрабатываем кастомизированные версии, предоставляем услугу как сервис.</p>
+                      </div><a class="btn" href="#feed">Обсудить проект</a>
+                      <div class="main-desc__map"><img src="/images/content/main-desc/map.svg" alt="lorem">
+                        <div class="main-desc__map-title">
+                          27 лет <br> рынке
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-desc__right">
+                    <div class="main-desc__items">
+                      <div class="main-desc__item">
+                        <div class="main-desc__item-left">
+                          <div class="main-desc__item-img"><img src="/images/content/main-desc/office.svg" alt="6"></div>
+                        </div>
+                        <div class="main-desc__item-right">
+                          <div class="main-desc__item-val">6</div>
+                          <div class="main-desc__item-txt">Офисов</div>
+                        </div>
+                      </div>
+                      <div class="main-desc__item">
+                        <div class="main-desc__item-left">
+                          <div class="main-desc__item-img"><img src="/images/content/main-desc/man.svg" alt="850"></div>
+                        </div>
+                        <div class="main-desc__item-right">
+                          <div class="main-desc__item-val">850</div>
+                          <div class="main-desc__item-txt">Сотрудников</div>
+                        </div>
+                      </div>
+                      <div class="main-desc__item">
+                        <div class="main-desc__item-left">
+                          <div class="main-desc__item-img"><img src="/images/content/main-desc/map-icon.svg" alt="100%"></div>
+                        </div>
+                        <div class="main-desc__item-right">
+                          <div class="main-desc__item-val">100%</div>
+                          <div class="main-desc__item-txt">Собственная российская разработка</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__section">
+            <div class="brands">
+              <h2 class="brands__title">Нам доверяют ведущие<br>Российские компании</h2>
+              <div class="brands__list">
+                <div class="brands__animate">
+                  <div class="brands__track">
+                    <div class="brands__item"><img src="images/content/brands/1.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/2.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/3.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/4.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/5.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/6.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/7.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/8.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/9.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/10.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/1.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/2.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/3.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/4.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/5.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/6.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/7.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/8.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/9.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/10.png" alt="brand"></div>
+                  </div>
+                </div>
+                <div class="brands__animate brands__animate--reverse">
+                  <div class="brands__track">
+                    <div class="brands__item"><img src="images/content/brands/1.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/2.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/3.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/4.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/5.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/6.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/7.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/8.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/9.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/10.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/1.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/2.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/3.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/4.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/5.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/6.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/7.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/8.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/9.png" alt="brand"></div>
+                    <div class="brands__item"><img src="images/content/brands/10.png" alt="brand"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div class="wrapper__footer">
+        <div class="container">
+          <div class="feed" id="feed">
+            <div class="feed__left">
+              <h2 class="feed__title">Обсудим проект</h2>
+              <div class="sub feed__sub">Спасибо за ваш интерес к нашим продуктам. Вы можете связаться с одним из наших экспертов, используя форму обратной связи, самостоятельно написать нам на почту или позвонить по телефону.</div>
+            </div>
+            <div class="feed__right">
+              <form class="feed__form form">
+                <div class="form__fields">
+                  <div class="fields">
+                    <div class="fields__item">
+                      <input class="fields__input" type="text" name="name" required placeholder="*Имя">
+                    </div>
+                    <div class="fields__item">
+                      <input class="fields__input" type="text" name="company" placeholder="Название компании">
+                    </div>
+                    <div class="fields__item">
+                      <input class="fields__input" type="tel" name="tel" placeholder="Телефон">
+                    </div>
+                    <div class="fields__item">
+                      <input class="fields__input" type="email" name="email" required placeholder="*e-mail">
+                    </div>
+                  </div>
+                </div>
+                <div class="form__accept">
+                  <label class="accept">
+                    <input class="accept__input" type="checkbox" name="accept" checked><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 8.68L5.5 13L18 1" stroke="#1B4ED1" stroke-width="2"/>
+</svg></span><span class="accept__content">Я принимаю условия <a href="/">Пользовательского соглашения</a><br>и согласен с <a href="/">Политикой конфиденциальности</a></span></span>
+                  </label>
+                </div>
+                <button class="btn form__submit" type="submit">Обсудить проект</button>
+              </form>
+            </div>
+          </div>
         </div>
+        <footer class="footer" id="footer">
+          <div class="container">
+            <div class="footer__grid">
+              <div class="footer__col">
+                <div class="footer__logo"><a href="#"><img src="/images/content/logo-white.svg" alt="lorem"></a></div>
+              </div>
+              <div class="footer__col">
+                <h3 class="footer__title">Разделы</h3>
+                <div class="footer__nav"><a class="footer__link" href="/projects/">Проекты</a><a class="footer__link" href="/import/">Импортозамещение</a><a class="footer__link" href="/news/">Пресс-центр</a><a class="footer__link" href="/about/">О компании</a>
+                </div>
+              </div>
+              <div class="footer__col">
+                <h3 class="footer__title">Контакты</h3>
+                <div class="footer__tel"><a href="tel:+74957803165">+7 495 780-31-65</a></div>
+                <div class="footer__email"><a href="mailto:bt@bpcbt.com">bt@bpcbt.com</a></div>
+                <div class="footer__socials"><a class="footer__social" href="https://vk.com/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="19.5" stroke="white"/>
+<path d="M20.7341 27.3233C13.8074 27.3233 9.85796 22.7021 9.70605 15H13.1694C13.2909 20.6581 15.8429 23.0576 17.8784 23.5315V15H21.1595V19.8879C23.1646 19.6805 25.2608 17.4587 25.9596 15H29.2407C28.6938 18.0216 26.4153 20.2433 24.8051 21.1617C26.4153 21.9022 29.028 23.8278 30.0002 27.3529H26.3849C25.6254 25.0127 23.681 23.2057 21.1291 22.9391V27.3233H20.7341Z" fill="white"/>
+</svg></a><a class="footer__social" href="https://telegram.org/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20Z" stroke="white"/>
+<path d="M28.7969 12.6822C28.7161 12.4685 28.6352 12.415 28.5274 12.3883C28.2309 12.2814 27.7727 12.4417 27.7727 12.4417C27.7727 12.4417 10.7375 18.4807 9.76714 19.1487C9.5515 19.2823 9.49759 19.3892 9.44369 19.4694C9.28196 19.9504 9.79409 20.1641 9.79409 20.1641L14.1877 21.5804C14.1877 21.5804 14.3494 21.6071 14.4033 21.5804C15.4006 20.9658 24.4303 15.3009 24.9424 15.1139C25.0233 15.0871 25.0772 15.1139 25.0772 15.1673C24.8885 15.8888 17.0448 22.8095 17.0448 22.8095C17.0448 22.8095 17.0179 22.8363 16.9909 22.8897L16.5596 27.1918C16.5596 27.1918 16.3979 28.5011 17.7187 27.1918C18.6621 26.2566 19.5785 25.4816 20.0098 25.1075C21.5192 26.1497 23.1365 27.272 23.8373 27.8865C24.1877 28.1805 24.4842 28.2339 24.7268 28.2339C25.4007 28.2072 25.5893 27.4857 25.5893 27.4857C25.5893 27.4857 28.6891 15.1139 28.7969 13.4571C28.7969 13.2968 28.8239 13.1899 28.8239 13.0831C28.8239 12.896 28.8239 12.7624 28.7969 12.6822Z" fill="white"/>
+</svg></a><a class="footer__social" href="https://zen.yandex.ru/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20Z" stroke="white"/>
+<g clip-path="url(#clip0_858_3290)">
+<path d="M33.1998 20.1422V19.8594C27.3541 19.6708 24.6858 19.5294 22.5455 17.4551C20.4712 15.3148 20.3204 12.6465 20.1412 6.80078H19.8584C19.6698 12.6465 19.5284 15.3148 17.4541 17.4551C15.3138 19.5294 12.6455 19.6802 6.7998 19.8594V20.1422C12.6455 20.3308 15.3138 20.4722 17.4541 22.5465C19.5284 24.6868 19.6792 27.3551 19.8584 33.2008H20.1412C20.3298 27.3551 20.4712 24.6868 22.5455 22.5465C24.6858 20.4722 27.3541 20.3214 33.1998 20.1422Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_858_3290">
+<rect width="22" height="22" fill="white" transform="translate(9 9)"/>
+</clipPath>
+</defs>
+</svg></a></div>
+              </div>
+              <div class="footer__col">
+                <h3 class="footer__title">Адрес</h3>
+                <div class="footer__addr">109028, Россия, Москва,<br>ул. Земляной Вал, 50A/8 стр.2</div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   </body>

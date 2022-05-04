@@ -1,0 +1,26 @@
+.search{
+  position: relative;
+  width: 150px;
+
+  &__icon{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    svg{
+      display: block;
+    }
+  }
+
+  &__input{
+    width: 100%;
+    padding: 5px 10px 5px 32px;
+    border-bottom: 1px solid $border;
+    font-size: 16px;
+    @include tr;
+
+    &:focus,&:active{
+      border-color: $blue;
+    }
+  }
+}

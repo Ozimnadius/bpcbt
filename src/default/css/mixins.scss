@@ -21,8 +21,9 @@ $vh: 1080;
 }
 
 @mixin content() {
+  --mb: 20px;
   ul {
-    margin: 1em 0;
+    margin-bottom: var(--mb);
     padding-left: 40px;
 
     li {
@@ -30,49 +31,11 @@ $vh: 1080;
     }
   }
 
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
-  p {
-    margin-bottom: 20px;
+  h1,h2,h3,h4,h5,h6,p {
+    margin-bottom: var(--mb);
+    color: currentColor;
   }
 
-}
-
-@mixin headers() {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
 }
 
 @mixin tr() {

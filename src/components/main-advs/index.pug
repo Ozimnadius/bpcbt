@@ -1,0 +1,31 @@
+.main-advs
+    -
+        var arr = [
+            {
+              img: '/images/content/main-advs/inn.svg',
+              title: 'Инновации',
+              txt: 'Разрабатываем уникальный софт'
+            },
+            {
+              img: '/images/content/main-advs/rel.svg',
+              title: 'Надежность',
+              txt: 'Высокий уровень отказоустойчивости'
+            },
+            {
+              img: '/images/content/main-advs/speed.svg',
+              title: 'Скорость',
+              txt: 'Быстрый вывод на рынок'
+            },
+            {
+              img: '/images/content/main-advs/safe.svg',
+              title: 'Безопасность',
+              txt: 'Многоступенчатая защита данных'
+            }
+        ];
+    each i in arr
+        .main-advs__item
+            .main-adv
+                .main-adv__img
+                    img(src=i.img alt=i.title)
+                h3.main-adv__title= i.title
+                .main-adv__txt.sub= i.txt

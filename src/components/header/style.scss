@@ -1,0 +1,41 @@
+.header {
+  background-color: $bg;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+
+  &__container{
+    width: 100%;
+    max-width: var(--container-big-width);
+    padding: var(--container-big-padding);
+    margin: 0 auto;
+  }
+
+  &__grid{
+    display: flex;
+    align-items: center;
+  }
+
+  &__left{
+    margin-right: auto;
+  }
+
+  &__center{
+    margin-right: 140px;
+  }
+
+  &__right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__link{
+    a{
+      @extend %btn;
+      width: 180px;
+      height: 80px;
+      text-transform: uppercase;
+    }
+  }
+}

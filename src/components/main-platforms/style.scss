@@ -1,0 +1,11 @@
+.main-platforms{
+  padding-top: 150px;
+  padding-bottom: 120px;
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}

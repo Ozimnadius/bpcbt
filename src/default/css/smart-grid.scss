@@ -2,8 +2,8 @@ $columns: 24;
 $atom: (100% / $columns);
 
 $break_xlg: 1919.98px;
-$break_lg: 1279.98px;
-$break_md: 991.98px;
+$break_lg: 1439.98px;
+$break_md: 1023.98px;
 $break_sm: 767.98px;
 $break_xs: 575.98px;
 
@@ -89,7 +89,7 @@ $fields_xs: 10px;
 }
 
 @mixin wrapper(){
-    max-width: 1800px;
+    max-width: 1440px;
     margin: 0 auto;
     @include wrapper-full();
 }

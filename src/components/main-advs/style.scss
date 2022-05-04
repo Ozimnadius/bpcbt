@@ -1,0 +1,23 @@
+.main-advs{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.main-adv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__img{
+    width: 100px;
+    margin-bottom: 40px;
+  }
+
+  &__title{
+    margin-bottom: 10px;
+  }
+}

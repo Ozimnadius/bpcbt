@@ -1,0 +1,18 @@
+.feed {
+  display: grid;
+  grid-template-columns: 715fr 690fr;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__sub {
+    width: min(100%, 460px);
+  }
+
+  &__form{
+    padding: 60px 120px 80px 40px;
+    background-color: $grey-light;
+  }
+
+}

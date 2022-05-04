@@ -1,0 +1,80 @@
+.platforms {
+  counter-reset: li;
+}
+
+.platform {
+  cursor: pointer;
+  border-top: 1px solid $border;
+  position: relative;
+
+  &:before{
+    counter-increment: li;
+    content: '0'counter(li);
+    display: block;
+
+    color: $blue;
+    font-family: Inter;
+    font-size: 16px;
+
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 20px;
+    @include tr;
+
+  }
+
+  &.active{
+
+    &:before{
+      color: $bg;
+    }
+
+    svg{
+      transform: rotate(-180deg);
+      path{
+        stroke: $bg;
+      }
+    }
+  }
+
+  &__grid {
+    padding: 25px 55px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+  }
+
+  &__wrap {
+    display: none;
+    background: $blue;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -86px;
+  }
+
+  &__content {
+    color: $bg;
+    width: min(100%, 750px);
+  }
+
+  &__btn{
+    height: 86px;
+  }
+
+  &__arr{
+    position: absolute;
+    z-index: 10;
+    top: 33px;
+    right: 20px;
+
+    svg{
+      display: block;
+      @include tr;
+      path{
+        @include tr;
+      }
+    }
+  }
+  
+}

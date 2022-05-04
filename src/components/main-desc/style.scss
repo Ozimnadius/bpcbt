@@ -1,0 +1,100 @@
+.main-desc {
+  position: relative;
+
+  &__grid {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__left {
+    position: relative;
+    //position: sticky;
+    //top: calc(50vh - 55px);
+    //top: 100px;
+    //left: 0;
+    width: 50%;
+  }
+
+  &__title {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 250px;
+      height: 1px;
+      background-color: $txt;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 70px;
+  }
+
+  &__content {
+    width: min(100%, 460px);
+    margin-bottom: 50px;
+
+    p{
+      font-family: Inter;
+      font-size: 20px;
+    }
+  }
+
+  &__map{
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    img{
+      display: block;
+      max-width: initial;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    padding-bottom: 230px;
+    //padding-bottom: calc(85vh - 60px);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+
+  &__item-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-val {
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__item-txt {
+    font-family: Inter;
+    font-size: 27px;
+  }
+}

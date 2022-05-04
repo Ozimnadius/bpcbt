@@ -1,260 +1,145 @@
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $bg;
-  width: 333px;
-  max-width: 100%;
-  height: 58px;
+%btn {
+  width: 239px;
+  height: 59px;
+  background-color: $blue;
   color: $bg;
-  font-family: Roboto;
-  font-weight: 300;
-  @include tr;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
 
-  &:hover {
-    background: $bg;
-    color: $txt;
-    @include lg-block{
-      background: transparent;
-      color: $bg;
-    }
-
-    svg {
-      transform: translateX(10px);
-      @include lg-block{
-          transform: none;
-      }
-    }
-  }
-
-  &--black {
-    color: $txt;
-    border-color: $txt;
-
-    &:hover {
-      background: $txt;
-      color: $bg;
-      @include lg-block{
-        color: $txt;
-        background: transparent;
-      }
-    }
-
-  }
-
-  &--gold {
-    border-color: $gold;
-    color: $txt;
-
-    &:hover {
-      background: $txt;
-      border-color: $txt;
-      color: $bg;
-    }
-  }
-
-  &--revers {
-    svg {
-      margin-right: 15px;
-      margin-left: 0 !important;
-    }
-
-    &:hover {
-      svg {
-        transform: translateX(-10px);
-      }
-    }
-  }
-
-  &--hover-black {
-    &:hover {
-      border-color: $txt;
-      background-color: $txt;
-      color: $bg;
-    }
-  }
-
-  svg {
-    fill: currentColor;
-    margin-left: 15px;
-    transition: transform 0.3s;
-  }
-
-
-}
-
-.btn2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $bg;
-  background: $bg;
-  width: 333px;
-  max-width: 100%;
-  height: 58px;
-  color: $txt;
-  font-family: Roboto;
-  font-weight: 300;
   @include tr;
 
   &:hover {
-    background: transparent;
-    color: $txt;
-
-    svg{
-      fill: $txt;
-    }
+    background-color: adjust-color($blue, $lightness: -10%);
   }
-
-  svg {
-    fill: $txt;
-    margin-left: 15px;
-    @include tr;
-  }
-
-  &--black {
-    background: $txt;
-    color: $bg;
-    border-color: $txt;
-
-    svg{
-      fill: $bg;
-    }
-
-    &:hover {
-      background: transparent;
-      color: $txt;
-
-      svg{
-        fill: $txt;
-      }
-    }
-
-  }
-
-
 }
 
-.title {
-  color: $txt;
-  font-size: 32px;
-  font-weight: 500;
-  text-transform: uppercase;
-  @include sm-block{
-    font-size: 20px;
-  }
+.btn {
+  @extend %btn;
+}
 
+.link{
+  --link-color: #1b4ed1;
 
-  &--line {
-    padding-top: 30px;
-    position: relative;
-    @include sm-block{
-      padding-top: 20px;
+  a{
+    color: var(--link-color);
+    font-size: 22px;
+    text-transform: uppercase;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    span{
+      color: var(--link-color);
     }
 
-    &:before {
-      content: '';
+    svg{
       display: block;
-      width: 64px;
-      height: 8px;
-      background-color: $gold;
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include sm-block{
-        height: 4px;
+      path{
+        stroke: var(--link-color);
       }
     }
   }
+
+  &--white{
+    --link-color: #fff;
+  }
 }
 
-.mb {
-  &0 {
-    margin-bottom: 0 !important;
-  }
-
-  &20 {
-    margin-bottom: 20px !important;
-  }
-
-  &40 {
-    margin-bottom: 40px !important;
-  }
-
-  &60 {
-    margin-bottom: 60px;
-  }
-
-  &80 {
-    margin-bottom: 80px !important;
-    @include xlg-block {
-      margin-bottom: 50px!important;
-    }
-    @include lg-block{
-      margin-bottom: 30px!important;
-    }
-  }
-
-  &120 {
-    margin-bottom: 120px !important;
-    @include xlg-block{
-      margin-bottom: 80px !important;
-    }
-    @include sm-block{
-      margin-bottom: 30px !important;
-    }
-  }
-
-}
-
-//Form elements
-.input {
-  display: block;
-  width: 100%;
-  height: 74px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: $bg;
-  color: $txt;
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 300;
-  padding: 0 30px;
-  border: 1px solid transparent;
-  resize: none;
-  @include tr;
-
-  @include lg-block{
-    height: 60px;
-    padding: 0 25px;
-  }
-  @include sm-block{
-    font-size: 16px;
-    height: 51px;
-  }
-
-  &--area {
-    height: 123px;
-    padding-top: 20px;
-  }
-
-  &:focus {
-    border-color: $link;
-  }
-
-  &.error {
-    border-color: red;
-
-    &::placeholder {
-      color: red;
-    }
-  }
-
-}
-
-.file {
-
-}
-
-.ovh{
+.ovh {
   overflow: hidden;
 }
+
+%header {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.h1 {
+  @extend %header;
+  font-size: 55px;
+  line-height: 120%;
+  @include xlg-block {
+    font-size: 45px;
+  }
+  @include lg-block {
+    font-size: 35px;
+  }
+}
+
+.h2 {
+  @extend %header;
+  font-size: 45px;
+  line-height: 120%;
+  @include sm-block {
+    font-size: 33px;
+  }
+}
+
+.h3 {
+  @extend %header;
+  font-size: 28px;
+  line-height: 130%;
+  @include xlg-block {
+    font-size: 26px;
+  }
+  @include lg-block {
+    font-size: 24px;
+  }
+
+}
+
+.h4 {
+  @extend %header;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+@each $i in h1, h2, h3, h4 {
+  #{$i} {
+    @extend .#{$i};
+  }
+}
+
+%txt {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  color: $black;
+}
+
+.txt {
+  @extend %txt;
+  font-size: 17px;
+  line-height: 140%;
+}
+
+.txt2 {
+  @extend %txt;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.sub {
+  @extend %txt;
+  font-size: 20px;
+  line-height: 130%;
+  @include lg-block {
+    font-size: 18px;
+  }
+}
+
+.color{
+  &-blue{
+    color: $blue;
+  }
+}
+

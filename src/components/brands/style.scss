@@ -1,0 +1,64 @@
+.brands{
+
+  &__title{
+    text-align: center;
+    margin-bottom: 65px;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__animate{
+    animation: sliderScroll 43s linear infinite;
+
+    &:hover{
+      animation-play-state: paused;
+    }
+
+    &--reverse{
+      animation: sliderScrollReverse 43s linear infinite;
+    }
+  }
+
+  &__track{
+    display: flex;
+    align-items: center;
+  }
+
+  &__item{
+    padding: 0 35px;
+    flex-shrink: 0;
+    filter: grayscale(1);
+    @include tr;
+
+    &:hover{
+      filter: grayscale(0);
+    }
+
+    img{
+      display: block;
+    }
+  }
+
+}
+
+@keyframes sliderScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2529px);
+  }
+}
+
+@keyframes sliderScrollReverse {
+  0% {
+    transform: translateX(-2529px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

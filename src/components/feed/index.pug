@@ -1,0 +1,38 @@
+.feed#feed
+    .feed__left
+        h2.feed__title Обсудим проект
+        .sub.feed__sub Спасибо за ваш интерес к нашим продуктам. Вы можете связаться с одним из наших экспертов, используя форму обратной связи, самостоятельно написать нам на почту или позвонить по телефону.
+    .feed__right
+        form.feed__form.form
+            .form__fields
+                -
+                    var fields = [
+                        {
+                            type: 'text',
+                            name: 'name',
+                            required: true,
+                            placeholder: '*Имя'
+                        },
+                        {
+                            type: 'text',
+                            name: 'company',
+                            required: false,
+                            placeholder: 'Название компании'
+                        },
+                        {
+                            type: 'tel',
+                            name: 'tel',
+                            required: false,
+                            placeholder: 'Телефон'
+                        },
+                        {
+                            type: 'email',
+                            name: 'email',
+                            required: true,
+                            placeholder: '*e-mail'
+                        }
+                    ];
+                include ../fields/index
+            .form__accept
+                include ../accept/index
+            button(type='submit').btn.form__submit Обсудить проект

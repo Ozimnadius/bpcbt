@@ -1,0 +1,24 @@
+.platforms
+    each i in arr
+        div(class=i.cls).platforms__item.platform
+            .platform__wrap
+                .platform__grid
+                    .platform__left
+                        .platform__img
+                            img(src=i.img alt=i.title)
+                    .platform__right
+                        .platform__content.content
+                            h3= i.title
+                            p= i.txt
+            .platform__btn
+                .platform__grid
+                    .platform__left
+
+                    .platform__right
+                        h3= i.title
+                    .platform__arr
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 20L20 1M20 1L0.999999 1M20 1L20 20" stroke="#232323" stroke-width="2"/>
+                        </svg>
+
+

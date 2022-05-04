@@ -1,18 +1,32 @@
 //USER
 @import "default/css/variables";
-@import "default/css/mixins";
 @import "default/css/fonts";
+@import "default/css/mixins";
 @import "default/css/smart-grid";
 @import "default/css/adjustment";
 @import "default/css/common";
 
+
 //COMPONENTS
 @import "components/header/style";
 @import "components/footer/style";
+@import "components/nav/style";
+@import "components/search/style";
+@import "components/main-banner/style";
+@import "components/circles/style";
+@import "components/main-advs/style";
+@import "components/main-about/style";
+@import "components/main-platforms/style";
+@import "components/platforms/style";
+@import "components/main-desc/style";
+@import "components/brands/style";
+@import "components/feed/style";
+@import "components/form/style";
+@import "components/fields/style";
+@import "components/accept/style";
 
 //PAGES
 @import "pages/style";
-
 
 .debug {
   @include debug(rgba(0,0,0,0.3), 1px solid red);
