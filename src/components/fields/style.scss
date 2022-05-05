@@ -16,7 +16,7 @@
       border-color: $blue;
     }
     
-    &:not(:valid){
+    &:focus:invalid,&:active:invalid{
       border-color: $red;
     }
   }

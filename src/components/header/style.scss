@@ -30,6 +30,10 @@
     gap: 30px;
   }
 
+  &__search{
+    //opacity: 0;
+  }
+
   &__link{
     a{
       @extend %btn;

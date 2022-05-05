@@ -43,18 +43,33 @@
     width: min(100%, 460px);
     margin-bottom: 50px;
 
-    p{
+    p {
       font-family: Inter;
       font-size: 20px;
     }
   }
 
-  &__map{
+  &__map {
     position: absolute;
     top: 0;
     right: 0;
     pointer-events: none;
-    img{
+
+    &-title {
+      font-size: 90px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      position: absolute;
+      top: 370px;
+      right: 340px;
+
+      -webkit-text-stroke: 1px $blue;
+      -webkit-text-fill-color: transparent;
+      text-indent: 190px;
+    }
+
+    img {
       display: block;
       max-width: initial;
     }

@@ -1,0 +1,20 @@
+.banner{
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  height: 550px;
+  display: flex;
+  align-items: center;
+
+
+  &__title{
+    color: $bg;
+    width: min(100%,1000px);
+    margin-bottom: 15px;
+  }
+
+  &__txt{
+    color: $bg;
+    width: min(100%,514px);
+  }
+}

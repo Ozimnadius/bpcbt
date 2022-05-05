@@ -30,6 +30,16 @@
 
 @font-face {
   font-family: 'Inter';
+  src: local('Inter Light'), local('Inter-Light'),
+  url('../fonts/Inter-Light.woff2') format('woff2'),
+  url('../fonts/Inter-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
   src: local('Inter Regular'), local('Inter-Regular'),
   url('../fonts/Inter-Regular.woff2') format('woff2'),
   url('../fonts/Inter-Regular.woff') format('woff');

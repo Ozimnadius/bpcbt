@@ -1,0 +1,49 @@
+.import-banner {
+  background: $blue;
+  height: 550px;
+  overflow: hidden;
+
+
+  &__container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: center;
+  }
+
+  &__img{
+    position: absolute;
+    top: -95px;
+    left: -40px;
+  }
+
+  &__title{
+    align-self: flex-end;
+    opacity: .5;
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px $bg;
+    -webkit-text-fill-color: transparent;
+    line-height: 105%;
+    text-align: right;
+    margin-bottom: 20px;
+
+    div{
+      &:nth-child(1){
+        margin-right: 170px;
+      }
+    }
+  }
+
+  &__sub{
+    color: $bg;
+    margin-bottom: 15px;
+  }
+
+  &__txt{
+    color: $bg;
+    max-width: 520px;
+  }
+}

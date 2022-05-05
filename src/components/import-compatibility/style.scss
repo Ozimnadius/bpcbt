@@ -1,0 +1,24 @@
+.import-compatibility {
+  padding-top: 220px;
+  padding-bottom: 150px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  &__imgs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border;
+    margin-bottom: 30px;
+  }
+
+  &__txt {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: lh(20, 27);
+  }
+}

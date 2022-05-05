@@ -1,0 +1,10 @@
+.import-dev
+    .import-dev__left
+        .import-dev__img
+            img(src="/images/content/import-dev/img.jpg" alt="Собственная российская разработка")
+    .import-dev__right
+        h2.import-dev__title.
+            Собственная<br><span class="color-blue">российская разработка</span>
+        ul.import-dev__list
+            each i in ['6 офисов в России, 75% сотрудников вовлечены в разработку','Продукты БПЦ включены в Единый реестр отечественного ПО','Совместимостимость с российским<br>и свободно распространяемым ПО']
+                li.import-dev__item.h4!=i

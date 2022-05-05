@@ -1,0 +1,41 @@
+.import-about
+    -
+        var arr =[
+            {
+                img: '/images/content/import-about/1.svg',
+                txt: 'Разработка ПО на территории РФ'
+            },
+            {
+                img: '/images/content/import-about/2.svg',
+                txt: 'Русскоязычная поддержка'
+            },
+            {
+                img: '/images/content/import-about/3.svg',
+                txt: 'Поставщик ПО для государственного сектора (работа по 44-ФЗ)'
+            },
+            {
+                img: '/images/content/import-about/4.svg',
+                txt: 'ПО зарегистрировано в едином реестре российских программ для ЭВМ и БД'
+            },
+            {
+                img: '/images/content/import-about/5.svg',
+                txt: 'Наличие лицензии ФСТЭК по технической защите конфиденциальной информации'
+            },
+            {
+                img: '/images/content/import-about/6.svg',
+                txt: 'Входит в Cписок аккредитованных организаций Министерства цифрового развития, связи и массовых коммуникаций РФ'
+            },
+            {
+                img: '/images/content/import-about/7.svg',
+                txt: 'Поддержка Российского окружения (СУБД, ОС)'
+            },
+            {
+                img: '/images/content/import-about/8.svg',
+                txt: 'Наличие лицензии ФСБ на разработку, производство и распространение криптографических (шифровальных) систем'
+            }
+        ];
+    each i in arr
+        .import-about__item
+            .import-about__img
+                img(src=i.img alt="lorem")
+            .import-about__txt.txt= i.txt
