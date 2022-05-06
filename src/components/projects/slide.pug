@@ -1,0 +1,15 @@
+.swiper-slide.projects__slide.project
+    .project__top
+        .project__img
+            img(src=i.img alt=i.name)
+        .project__name= i.name
+    .project__bottom
+        h4.project__title= i.title
+        ul.project__ul
+            each li in i.ul
+                li.project__li.txt= li
+        .project__items
+            each item in i.desc
+                .project__item
+                    .project__val= item.val
+                    .project__txt= item.txt

@@ -25,13 +25,14 @@
 
   &__track{
     display: flex;
-    align-items: center;
   }
 
   &__item{
     padding: 0 35px;
     flex-shrink: 0;
     filter: grayscale(1);
+    display: flex;
+    align-items: center;
     @include tr;
 
     &:hover{

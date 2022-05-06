@@ -1,5 +1,6 @@
 .main-desc {
   position: relative;
+  margin-bottom: 230px;
 
   &__grid {
     position: relative;
@@ -8,12 +9,11 @@
   }
 
   &__left {
-    position: relative;
-    //position: sticky;
-    //top: calc(50vh - 55px);
-    //top: 100px;
-    //left: 0;
+    position: sticky;
+    top: 100px;
+    left: 0;
     width: 50%;
+    margin-bottom: 50px;
   }
 
   &__title {
@@ -77,8 +77,6 @@
 
   &__right {
     width: 50%;
-    padding-bottom: 230px;
-    //padding-bottom: calc(85vh - 60px);
   }
 
   &__items {

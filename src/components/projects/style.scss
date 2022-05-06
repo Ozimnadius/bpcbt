@@ -1,0 +1,177 @@
+.projects {
+  padding-top: 35px;
+
+  &__top {
+    margin-bottom: 50px;
+  }
+
+  &__btns {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid $border;
+  }
+
+  &__btn {
+    color: $grey;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 14px 50px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    @include tr;
+
+    &.active {
+      color: $blue;
+      border-color: $blue;
+
+      .projects__nav {
+        display: flex;
+      }
+    }
+  }
+
+  &__nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    gap: 30px;
+  }
+
+  &__arr {
+    --stroke: #d7d7d7;
+    padding: 12px;
+    @include tr;
+
+    &:hover {
+      --stroke: #1b4ed1;
+    }
+
+    svg {
+      path {
+        stroke: var(--stroke);
+        @include tr;
+      }
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__swiper{
+    margin-bottom: 40px;
+  }
+
+  &__slide {
+    width: 800px;
+    opacity: .5;
+    @include tr;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+
+  &__pag{
+    width: 800px!important;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__bullet{
+    flex-grow: 1;
+    height: 2px;
+    background-color: $border;
+
+    &.active{
+      background-color: $blue;
+    }
+  }
+
+}
+
+.project {
+  background-color: $bg;
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 35px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 47px;
+      background-color: $bg;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__name {
+    padding-left: 35px;
+    color: $bg;
+    font-family: Inter;
+    font-size: 17px;
+  }
+
+  &__bottom {
+    padding: 30px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 50px;
+  }
+
+  &__items{
+    margin-top: auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+  }
+
+  &__val{
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  &__txt{
+    color: $blue;
+    font-family: Inter;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+}

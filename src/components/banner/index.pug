@@ -1,7 +1,5 @@
-div(style='background-image: url(/images/content/import/banner.jpg);').banner
+div(style=`background-image: url(${banner.img});`).banner
     .container
-        .banner__title.h1 Импортозамещение в критических информационных инфраструктурах
-        .banner__txt.sub.
-            Программные продукты БПЦ разработаны
-            в Российской Федерации, соответствуют всем критериям импортозамещения и устойчивости
-            к санкциям
+        .banner__title.h1= banner.title
+        if banner.txt
+            .banner__txt.sub= banner.txt

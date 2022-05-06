@@ -1,5 +1,8 @@
 include default/pug/_mixins
 include default/pug/_settings
+
+- var bgc = '#FFFFFF';
+- var feedColor = '#F2F4F8';
 block variables
 
 doctype html
@@ -26,7 +29,7 @@ html(lang="ru")
         script(defer src='/js/script.js')
         // Для изменений после верстки
         script(defer src='/js/custom.js')
-    body
+    body(style=`--bgc:${bgc};--feedBgc:${feedColor}`)
         .wrapper
             .wrapper__header
                 include components/header/index

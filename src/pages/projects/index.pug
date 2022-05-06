@@ -2,9 +2,20 @@ extends ../../main
 
 block variables
     - var title = 'Проекты'
+    - var bgc = '#F2F4F8';
+    - var feedColor = '#FFFFFF';
 
 block content
     main.page
+        section.page__section
+            -
+                var banner = {
+                    img: '/images/content/projects/banner.jpg',
+                    title: 'Мы гордимся нашими проектами',
+                };
+            include ../../components/banner/index
+        section.page__section
+            include ../../components/projects/index
 
 
 

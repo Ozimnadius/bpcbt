@@ -6,3 +6,4 @@
 // @prepros-append ../node_modules/jquery-validation/dist/jquery.validate.js
 // @prepros-append ../node_modules/gsap/dist/gsap.js
 // @prepros-append ../node_modules/gsap/dist/ScrollTrigger.js
+// @prepros-append ../node_modules/ozimnad-tabs/dist/script.js
