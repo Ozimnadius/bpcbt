@@ -1,0 +1,34 @@
+.emps{
+
+  &__title{
+    margin-bottom: 50px;
+  }
+
+  &__list{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px 20px;
+  }
+}
+
+.emp{
+  display: flex;
+  flex-direction: column;
+
+  &__img{
+    aspect-ratio: 690/415;
+    margin-bottom: 15px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__name{
+    color: $blue;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,60 @@
+.emps
+    h2.emps__title Руководители направлений
+    -
+        var arr = [
+            {
+                img: '/images/content/emps/1.jpg',
+                thumb: '/images/content/emps/thumb1.jpg',
+                name: 'Дмитрий Бубнов',
+                post: 'Генеральный директор'
+            },
+            {
+                img: '/images/content/emps/2.jpg',
+                thumb: '/images/content/emps/thumb2.jpg',
+                name: 'Маргарита Миронова',
+                post: 'Директор по работе с ключевыми клиентами финансового сектора'
+            },
+            {
+                img: '/images/content/emps/3.jpg',
+                thumb: '/images/content/emps/thumb3.jpg',
+                name: 'Александр Баскин',
+                post: 'Руководитель направления по работе с корпоративным сектором'
+            },
+            {
+                img: '/images/content/emps/4.jpg',
+                thumb: '/images/content/emps/thumb4.jpg',
+                name: 'Александр Белов',
+                post: 'Руководитель направления по работе с государственным сектором'
+            },
+            {
+                img: '/images/content/emps/5.jpg',
+                thumb: '/images/content/emps/thumb5.jpg',
+                name: 'Кирилл Поволоцкий',
+                post: 'Руководитель направления'
+            },
+            {
+                img: '/images/content/emps/6.jpg',
+                thumb: '/images/content/emps/thumb6.jpg',
+                name: 'Николай Мельников',
+                post: 'Руководитель направления'
+            },
+            {
+                img: '/images/content/emps/7.jpg',
+                thumb: '/images/content/emps/thumb7.jpg',
+                name: 'Максим Павлов',
+                post: 'Руководитель направления разработки и развития'
+            },
+            {
+                img: '/images/content/emps/8.jpg',
+                thumb: '/images/content/emps/thumb8.jpg',
+                name: 'Анна Кожурина',
+                post: 'Директор по маркетингу'
+            }
+        ];
+    .emps__list
+        each i in arr
+            a(href=i.img data-fancybox='emps').emps__item.emp
+                span.emp__img
+                    img(src=i.thumb alt=i.name)
+                span.emp__name.h3= i.name
+                span.emp__post.txt= i.post
