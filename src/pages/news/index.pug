@@ -1,11 +1,20 @@
 extends ../../main
 
 block variables
-    - var title = 'Пресс-центр'
+    - var title = 'Новости'
 
 block content
     main.page
-
+        section.page__section
+            -
+                var banner = {
+                    img: '/images/content/news/banner.jpg',
+                    title: 'Новости',
+                };
+            include ../../components/banner/index
+        section.page__section
+            .container
+                include ../../components/news/index
 
 
 
