@@ -1,0 +1,42 @@
+.article{
+  position: relative;
+  padding-top: 100px;
+
+  &__grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 'left center center right';
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__left{
+    padding-top: 10px;
+    grid-area: left;
+  }
+
+  &__date{
+    color: $grey;
+    font-family: Inter;
+    font-size: 16px;
+  }
+
+  &__center{
+    grid-area: center;
+  }
+
+  &__title{
+    margin-bottom: 45px;
+  }
+
+  &__right{
+    padding-top: 10px;
+    grid-area: right;
+    position: sticky;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}

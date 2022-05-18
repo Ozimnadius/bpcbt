@@ -1,0 +1,37 @@
+.article-more{
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__nav{
+    display: flex;
+    gap: 30px;
+  }
+
+  &__arr{
+    padding: 10px;
+    color: $border;
+    @include tr;
+
+    &:hover{
+      color: $blue;
+    }
+
+    svg{
+      display: block;
+      path{
+        stroke: currentColor;
+      }
+    }
+  }
+
+  &__slide{
+    width: 454px;
+    box-sizing: border-box;
+    height: auto;
+  }
+}

@@ -1,0 +1,107 @@
+.scan{
+  padding-top: 60px;
+
+  &__title{
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__form{
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__field{
+    flex-grow: 1;
+  }
+
+  &__input{
+    border-bottom: 1px solid $border;
+    color: $txt;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 0;
+    width: 100%;
+    @include tr;
+
+    &:active,&:focus{
+      border-color: $blue;
+    }
+  }
+
+  &__nothing{
+    color: $grey;
+    font-family: Inter;
+    font-size: 20px;
+  }
+
+  &__pag{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list{
+    margin-top: 60px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.scan-pag{
+  display: flex;
+  align-items: center;
+
+  &__arr{
+    color: $border;
+    padding: 10px;
+    @include tr;
+
+    &:hover{
+      color: $blue;
+    }
+
+    svg{
+      display: block;
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__links{
+    display: flex;
+  }
+
+  &__link{
+    padding: 10px;
+    color: $grey;
+    font-size: 20px;
+    @include tr;
+    &:hover,&.active{
+      color: $blue;
+    }
+  }
+}
+
+.scan-item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__title{
+    color: $blue;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__desc{
+    font-family: Inter;
+    font-size: 20px;
+    line-height: lh(20,26);
+  }
+}

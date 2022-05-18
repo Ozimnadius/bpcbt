@@ -1,0 +1,19 @@
+.article-another{
+  width: 230px;
+
+  &__title{
+    font-family: Inter;
+    font-size: 16px;
+  }
+
+  &__item{
+    display: block;
+    padding: 25px 0;
+    border-bottom: 1px solid $border;
+    text-transform: uppercase;
+
+    &:last-child{
+      border: none;
+    }
+  }
+}

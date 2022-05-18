@@ -49,12 +49,6 @@ body {
 
 .content {
   @include content;
-
-  p{
-    b{
-      @extend .sub;
-    }
-  }
 }
 
 a {

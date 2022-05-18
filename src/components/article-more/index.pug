@@ -1,0 +1,64 @@
+.article-more
+    .container
+        .article-more__top
+            h2.article-more__title Больше новостей
+            .article-more__nav
+                a(href="#").article-more__prev.article-more__arr
+                    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 30L2 15.5L16 1" stroke="#D7D7D7" stroke-width="2"/>
+                    </svg>
+                a(href="#").article-more__next.article-more__arr
+                    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 30L15 15.5L1 1" stroke="#1B4ED1" stroke-width="2"/>
+                    </svg>
+
+    .article-more__swiper.swiper
+        .swiper-wrapper
+            -
+                var list= [
+                    {
+                        date: '17 апреля',
+                        img: '/images/content/news/1.jpg',
+                        title: 'СмартВиста День состоится 26 мая',
+                        desc: '26 мая 2022 г. Состоится очередное мероприятие СмартВиста День.',
+                        href: '/news/1/',
+                    },
+                    {
+                        date: '06 апреля',
+                        img: '/images/content/news/2.jpg',
+                        title: 'Компания БПЦ Банковские технологии выступила на конференции «Banks IT Day 2022» издания Tadviser',
+                        desc: 'БПЦ Банковские технологии выступила на офлайн-конференции...',
+                        href: '/news/1/',
+                    },
+                    {
+                        date: '17 апреля',
+                        img: '/images/content/news/3.jpg',
+                        title: 'Мобильное приложение для инвестирования от БПЦ внедрено в Севергазбанке',
+                        desc: 'В декабре 2021 года БПЦ совместно с Севергазбанком запустили...',
+                        href: '/news/1/',
+                    },
+                    {
+                        date: '17 апреля',
+                        img: '/images/content/news/4.jpg',
+                        title: 'Мошенничество – новая старая чума',
+                        desc: 'Банки и другие финансовые организации являются объектами критической информационной инфраструктуры, поэтому они должны быть...',
+                        href: '/news/1/',
+                    },
+                    {
+                        date: '25 февраля',
+                        img: '/images/content/news/5.jpg',
+                        title: 'Тинькофф выбрал платежные сервисы SaaS от БПЦ для геоэкспансии в Азии',
+                        desc: 'Тинькофф выбрал БПЦ как эксперта в сфере цифрового банковского обслуживания и платежей...',
+                        href: '/news/1/',
+                    },
+                    {
+                        date: '17 апреля',
+                        img: '/images/content/news/6.jpg',
+                        title: '«Микрон», надежда российской электроники под санкциями, получил прибыль впервые за 12 лет',
+                        desc: 'Главный российский производитель процессоров, зеленоградский...',
+                        href: '/news/1/',
+                    },
+                ]
+            each i in list
+                .swiper-slide.article-more__slide
+                    include ../news/item

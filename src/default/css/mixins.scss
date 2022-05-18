@@ -22,19 +22,34 @@ $vh: 1080;
 
 @mixin content() {
   --mb: 20px;
+  font-family: Inter;
+
   ul {
     margin-bottom: var(--mb);
-    padding-left: 40px;
+    padding-left: 30px;
 
     li {
       list-style: disc;
     }
   }
 
-  h1,h2,h3,h4,h5,h6,p {
+  h1, h2, h3, h4, h5, h6, p {
     margin-bottom: var(--mb);
     color: currentColor;
   }
+
+  h3{
+    font-size: 35px;
+  }
+
+  img{
+    margin-bottom: var(--mb);
+  }
+
+  b {
+    font-weight: 700;
+  }
+
 
 }
 

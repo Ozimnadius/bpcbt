@@ -12,6 +12,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   &__date{
     color: $grey;
@@ -32,8 +33,6 @@
   }
 
   &__title{
-    font-size: 20px;
-    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
