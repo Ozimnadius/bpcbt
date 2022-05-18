@@ -1,0 +1,22 @@
+.service-banner{
+  display:grid;
+  grid-template-columns: 783px 1fr;
+  background-color: $grey-light;
+
+  &__img{
+    width: 100%;
+    aspect-ratio: 783/550;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__right{
+    display: flex;
+    align-items: center;
+    padding-left: 185px;
+  }
+}

@@ -1954,6 +1954,41 @@ input, textarea {
   line-height: 1.3;
 }
 
+.service-banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 783px 1fr;
+  grid-template-columns: 783px 1fr;
+  background-color: #f2f4f8;
+}
+.service-banner__img {
+  width: 100%;
+  aspect-ratio: 783/550;
+}
+.service-banner__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.service-banner__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 185px;
+}
+
+.service-content {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  width: min(100%, 690px);
+  margin: 0 auto;
+}
+
 .page {
   padding-bottom: 200px;
 }
