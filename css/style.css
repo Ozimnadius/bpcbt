@@ -1314,7 +1314,12 @@ input, textarea {
 }
 .platform.active:before {
   color: #ffffff;
-  left: 15px;
+  left: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .platform.active:before {
+    left: 15px;
+  }
 }
 .platform.active svg {
   -webkit-transform: rotate(-180deg);
@@ -3509,9 +3514,53 @@ input, textarea {
   grid-template-columns: 783px 1fr;
   background-color: #f2f4f8;
 }
+@media screen and (max-width: 1919.98px) {
+  .service-banner {
+    -ms-grid-columns: 543px 1fr;
+    grid-template-columns: 543px 1fr;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .service-banner {
+    -ms-grid-columns: 386px 1fr;
+    grid-template-columns: 386px 1fr;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .service-banner {
+    -ms-grid-columns: 350px 1fr;
+    grid-template-columns: 350px 1fr;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .service-banner {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+}
 .service-banner__img {
   width: 100%;
   aspect-ratio: 783/550;
+}
+@media screen and (max-width: 1919.98px) {
+  .service-banner__img {
+    aspect-ratio: 543/550;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .service-banner__img {
+    aspect-ratio: 386/400;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .service-banner__img {
+    aspect-ratio: 350px/400;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .service-banner__img {
+    aspect-ratio: 375/400;
+  }
 }
 .service-banner__img img {
   display: block;
@@ -3529,12 +3578,36 @@ input, textarea {
           align-items: center;
   padding-left: 185px;
 }
+@media screen and (max-width: 1439.98px) {
+  .service-banner__right {
+    padding-left: 135px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .service-banner__right {
+    padding-left: 45px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .service-banner__right {
+    padding: 40px 15px;
+  }
+}
 
 .service-content {
   padding-top: 100px;
-  padding-bottom: 150px;
   width: min(100%, 690px);
   margin: 0 auto;
+}
+@media screen and (max-width: 1023.98px) {
+  .service-content {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .service-content {
+    padding-top: 40px;
+  }
 }
 
 .up {

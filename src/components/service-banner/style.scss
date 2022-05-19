@@ -1,12 +1,37 @@
-.service-banner{
-  display:grid;
+.service-banner {
+  display: grid;
   grid-template-columns: 783px 1fr;
   background-color: $grey-light;
+  @include xlg-block {
+    grid-template-columns: 543px 1fr;
+  }
+  @include lg-block {
+    grid-template-columns: 386px 1fr;
+  }
+  @include md-block{
+      grid-template-columns: 350px 1fr;
+  }
+  @include sm-block{
+      grid-template-columns: 100%;
+  }
 
-  &__img{
+  &__img {
     width: 100%;
     aspect-ratio: 783/550;
-    img{
+    @include xlg-block {
+      aspect-ratio: 543/550;
+    }
+    @include lg-block {
+      aspect-ratio: 386/400;
+    }
+    @include md-block{
+        aspect-ratio: 350px/400;
+    }
+    @include sm-block{
+        aspect-ratio: 375/400;
+    }
+
+    img {
       display: block;
       width: 100%;
       height: 100%;
@@ -14,9 +39,18 @@
     }
   }
 
-  &__right{
+  &__right {
     display: flex;
     align-items: center;
     padding-left: 185px;
+    @include lg-block{
+      padding-left: 135px;
+    }
+    @include md-block{
+      padding-left: 45px;
+    }
+    @include sm-block{
+      padding: 40px 15px;
+    }
   }
 }

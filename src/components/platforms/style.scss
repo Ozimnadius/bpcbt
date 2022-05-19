@@ -31,7 +31,10 @@
   &.active{
     &:before{
       color: $bg;
-      left: 15px;
+      left: 20px;
+      @include sm-block{
+        left: 15px;
+      }
     }
 
     svg{
