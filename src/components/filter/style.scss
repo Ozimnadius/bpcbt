@@ -1,0 +1,30 @@
+.filter{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__btn{
+    display: none;
+    gap: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border;
+    @include md-block{
+      display: flex;
+    }
+  }
+
+  &__drop{
+    @include md-block{
+      display: none;
+      position: absolute;
+      z-index: 50;
+      top: calc(100% + 15px);
+      left: 0;
+      right: 0;
+    }
+  }
+}

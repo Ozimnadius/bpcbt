@@ -11,33 +11,37 @@ window.addEventListener('load', function () {
             tabSelector: '.projects__tab'
         });
 
-        sliders.forEach(function (i, x) {
-            let swiper = i.querySelector('.projects__swiper'),
-                pag = i.querySelector('.projects__pag'),
-                nav = navs[x],
-                prev = nav.querySelector('.projects__prev'),
-                next = nav.querySelector('.projects__next');
+        if (isMobile.phone || isMobile.tablet){
+            // console.log('MOBILE');
+        } else {
+            sliders.forEach(function (i, x) {
+                let swiper = i.querySelector('.projects__swiper'),
+                    pag = i.querySelector('.projects__pag'),
+                    nav = navs[x],
+                    prev = nav.querySelector('.projects__prev'),
+                    next = nav.querySelector('.projects__next');
 
-            swiper = new Swiper(swiper, {
-                slidesPerView: 'auto',
-                speed: 500,
-                spaceBetween: 40,
-                loop: true,
-                centeredSlides: true,
-                grabCursor: true,
-                // initialSlide: 1,
-                slideActiveClass: 'active',
-                navigation: {
-                    nextEl: next,
-                    prevEl: prev,
-                },
-                pagination: {
-                    el: pag,
-                    bulletClass: 'projects__bullet',
-                    bulletActiveClass: 'active'
-                },
+                swiper = new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    speed: 500,
+                    spaceBetween: 40,
+                    loop: true,
+                    centeredSlides: true,
+                    grabCursor: true,
+                    // initialSlide: 1,
+                    slideActiveClass: 'active',
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    pagination: {
+                        el: pag,
+                        bulletClass: 'projects__bullet',
+                        bulletActiveClass: 'active'
+                    },
+                });
             });
-        });
-    }
+        }
 
+    }
 });

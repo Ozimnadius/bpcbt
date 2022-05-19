@@ -19,10 +19,6 @@
     color: $bg;
     width: min(100%,1000px);
     margin-bottom: 15px;
-    font-size: 55px;
-    @include sm-block{
-      font-size: 35px;
-    }
   }
 
   &__txt{

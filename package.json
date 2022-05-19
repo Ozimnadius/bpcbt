@@ -13,6 +13,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "gsap": "^3.10.4",
     "inputmask": "^5.0.7",
+    "ismobilejs": "^1.1.1",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
