@@ -1,16 +1,6 @@
 .brands{
   width: 100%;
   overflow: hidden;
-  padding-top: 400px;
-  @include xlg-block{
-    padding-top: 300px;
-  }
-  @include lg-block{
-    padding-top: 150px;
-  }
-  @include md-block{
-    padding-top: 0;
-  }
 
   &__title{
     text-align: center;

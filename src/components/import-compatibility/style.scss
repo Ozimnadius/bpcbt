@@ -5,6 +5,27 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  @include lg-block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    grid-template-columns: 100%;
+    gap: 60px;
+  }
+  @include sm-block{
+
+  }
+
+  &__title {
+    @include sm-block {
+      font-size: 32px;
+    }
+  }
+
+  &__right {
+    @include lg-block {
+      width: min(100%, 690px);
+    }
+  }
 
   &__imgs {
     display: flex;
@@ -13,6 +34,14 @@
     padding-bottom: 20px;
     border-bottom: 2px solid $border;
     margin-bottom: 30px;
+    gap: 20px;
+    @include xlg-block {
+      gap: 45px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__txt {

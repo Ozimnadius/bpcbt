@@ -1,14 +1,21 @@
-.import-products{
+.import-products {
   position: relative;
+  overflow: hidden;
 
-  &__img{
+  &__img {
     aspect-ratio: 595/550;
     position: absolute;
     top: 0;
     right: 0;
     width: 595px;
+    @include xlg-block {
+      right: -185px;
+    }
+    @include lg-block{
+      display: none;
+    }
 
-    img{
+    img {
       display: block;
       width: 100%;
       height: 100%;
@@ -16,34 +23,55 @@
     }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 60px;
+    @include sm-block{
+      margin-bottom: 40px;
+    }
   }
 
-  &__cols{
-    display:grid;
-    grid-template-columns: repeat(3,325px);
+  &__cols {
+    --col-width: 325px;
+    --col-count: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--col-count), var(--col-width));
     gap: 30px;
+    @include xlg-block {
+      --col-width: 280px;
+      gap: 20px;
+    }
+    @include md-block{
+       --col-count: 2;
+      gap: 50px 20px;
+    }
+    @include sm-block{
+        --col-count: 1;
+      gap: 30px;
+    }
+
   }
 
-  &__items{
+  &__items {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
 
-  &__sub{
+  &__sub {
     margin-bottom: 15px;
+    @include lg-block{
+      font-size: 28px;
+    }
   }
 
-  &__ul{
+  &__ul {
     list-style: disc;
     padding-left: 30px;
   }
 
-  &__li{
+  &__li {
     font-family: Inter;
     font-size: 20px;
-    line-height: lh(20,26);
+    line-height: lh(20, 26);
   }
 }

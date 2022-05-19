@@ -5,16 +5,34 @@
   height: 550px;
   display: flex;
   align-items: center;
+  @include sm-block{
+    height: 466px;
+  }
 
+  .container{
+    @include md-block{
+      max-width: 650px;
+    }
+  }
 
   &__title{
     color: $bg;
     width: min(100%,1000px);
     margin-bottom: 15px;
+    font-size: 55px;
+    @include sm-block{
+      font-size: 35px;
+    }
   }
 
   &__txt{
     color: $bg;
     width: min(100%,690px);
+    @include md-block{
+      font-size: 20px;
+    }
+    @include sm-block{
+      font-size: 18px;
+    }
   }
 }

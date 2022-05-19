@@ -5,9 +5,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  @include lg-block {
+    grid-template-columns: 100%;
+    gap: 50px;
+    padding-bottom: 100px;
+  }
+  @include sm-block{
+    padding-top: 50px;
+    padding-bottom: 80px;
+    gap: 20px;
+  }
 
   &__img {
     aspect-ratio: 690/484;
+    @include lg-block{
+        aspect-ratio: 860/484;
+    }
 
     img {
       display: block;
@@ -21,10 +34,19 @@
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    @include lg-block{
+      padding: 0;
+    }
   }
 
   &__title {
     margin-bottom: 60px;
+    @include lg-block{
+      margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -35,7 +57,7 @@
     padding: 10px 0 10px 50px;
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 9px;
