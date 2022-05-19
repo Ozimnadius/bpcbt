@@ -3392,6 +3392,17 @@ input, textarea {
   margin-bottom: 60px;
   text-align: center;
 }
+@media screen and (max-width: 1439.98px) {
+  .scan__title {
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .scan__title {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
 .scan__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3401,6 +3412,12 @@ input, textarea {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (max-width: 767.98px) {
+  .scan__form {
+    gap: 0px;
+  }
 }
 .scan__field {
   -webkit-box-flex: 1;
@@ -3418,8 +3435,38 @@ input, textarea {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+@media screen and (max-width: 767.98px) {
+  .scan__input {
+    padding: 10px 0;
+  }
+}
 .scan__input:active, .scan__input:focus {
   border-color: #1b4ed1;
+}
+@media screen and (max-width: 767.98px) {
+  .scan__submit {
+    background: transparent url("/images/icons/loop.svg") 0 0 no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+  }
+}
+.scan__reset {
+  display: none;
+  width: 19px;
+  height: 19px;
+}
+@media screen and (max-width: 767.98px) {
+  .scan__reset {
+    display: block;
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+  }
 }
 .scan__nothing {
   color: #7c7c7c;
@@ -3435,6 +3482,7 @@ input, textarea {
           justify-content: center;
 }
 .scan__list {
+  max-width: 1045px;
   margin-top: 60px;
   margin-bottom: 90px;
   display: -webkit-box;
