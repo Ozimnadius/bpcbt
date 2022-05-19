@@ -1,26 +1,33 @@
-.nav{
+.nav {
   display: flex;
   gap: 30px;
+  @include xlg-block {
+    gap: 45px;
+  }
+  @include md-block{
+      flex-direction: column;
+  }
 
-  &__item{
+  &__item {
     position: relative;
     cursor: pointer;
 
-    &:hover{
-      .nav__link{
+    &:hover {
+      .nav__link {
         color: $blue;
-        svg{
+
+        svg {
           display: block;
         }
       }
 
-      .nav__drop{
+      .nav__drop {
         display: block;
       }
     }
   }
 
-  &__link{
+  &__link {
     display: flex;
     padding: 30px 0;
     align-items: center;
@@ -28,8 +35,11 @@
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
+    @include xlg-block {
+      font-size: 15px;
+    }
 
-    svg{
+    svg {
       position: absolute;
       top: 50%;
       right: calc(100% + 5px);
@@ -39,7 +49,7 @@
     }
   }
 
-  &__drop{
+  &__drop {
     display: none;
     position: absolute;
     top: calc(100% - 1px);
@@ -47,8 +57,8 @@
   }
 }
 
-.subnav{
-  width: min(100%,600px);
+.subnav {
+  width: min(100%, 600px);
   background-color: $bg;
   padding: 25px 30px;
   display: flex;
@@ -56,7 +66,7 @@
   gap: 10px;
 
 
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -65,17 +75,17 @@
     color: $txt;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $blue;
     }
   }
 
-  &__title{
+  &__title {
     font-size: 16px;
     font-weight: 500;
   }
 
-  &__ul{
+  &__ul {
     display: flex;
     flex-direction: column;
     gap: 9px;
@@ -83,7 +93,7 @@
     padding-left: 25px;
   }
 
-  &__li{
+  &__li {
     font-size: 14px;
   }
 }

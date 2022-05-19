@@ -21,13 +21,17 @@
     top: 30px;
     left: 20px;
     @include tr;
+    @include sm-block{
+      top: 20px;
+      left: 0px;
+    }
 
   }
 
   &.active{
-
     &:before{
       color: $bg;
+      left: 15px;
     }
 
     svg{
@@ -38,28 +42,56 @@
     }
   }
 
-  &__grid {
-    padding: 25px 55px;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 50px;
-  }
-
   &__wrap {
     display: none;
     background: $blue;
     position: relative;
     z-index: 2;
     margin-bottom: -86px;
+    .platform__grid{
+      @include sm-block{
+        padding: 50px 15px 35px 15px;
+      }
+    }
+  }
+
+  &__grid {
+    padding: 25px 55px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+    @include xlg-block{
+      padding: 30px 55px;
+      grid-template-columns: 205px 1fr;
+      gap: 40px;
+    }
+    @include lg-block{
+      grid-template-columns: 1fr;
+      padding: 30px 60px;
+    }
+    @include sm-block{
+      padding: 20px 35px;
+    }
+  }
+
+  &__left{
+    @include lg-block{
+      display: none;
+    }
   }
 
   &__content {
     color: $bg;
     width: min(100%, 750px);
+
+    h3{
+      @extend .h3;
+      color: $bg;
+    }
   }
 
   &__btn{
-    height: 86px;
+    min-height: 86px;
   }
 
   &__arr{

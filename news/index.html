@@ -95,6 +95,9 @@
                   </form>
                 </div>
                 <div class="header__link"><a href="#footer">Контакты</a></div>
+                <div class="header__mmenu-btn" data-action="openMmenu">
+                  <button class="mmenu-btn" type="button"><span class="mmenu-btn__line"></span><span class="mmenu-btn__line"></span><span class="mmenu-btn__line"></span></button>
+                </div>
               </div>
             </div>
           </div>
@@ -481,39 +484,41 @@
         </main>
       </div>
       <div class="wrapper__footer">
-        <div class="container">
-          <div class="feed" id="feed">
-            <div class="feed__left">
-              <h2 class="feed__title">Обсудим проект</h2>
-              <div class="sub feed__sub">Спасибо за ваш интерес к нашим продуктам. Вы можете связаться с одним из наших экспертов, используя форму обратной связи, самостоятельно написать нам на почту или позвонить по телефону.</div>
-            </div>
-            <div class="feed__right">
-              <form class="feed__form form">
-                <div class="form__fields">
-                  <div class="fields">
-                    <div class="fields__item">
-                      <input class="fields__input" type="text" name="name" required placeholder="*Имя">
-                    </div>
-                    <div class="fields__item">
-                      <input class="fields__input" type="text" name="company" placeholder="Название компании">
-                    </div>
-                    <div class="fields__item">
-                      <input class="fields__input" type="tel" name="tel" placeholder="Телефон">
-                    </div>
-                    <div class="fields__item">
-                      <input class="fields__input" type="email" name="email" required placeholder="*e-mail">
+        <div class="feed" id="feed">
+          <div class="container">
+            <div class="feed__grid">
+              <div class="feed__left">
+                <h2 class="feed__title">Обсудим проект</h2>
+                <div class="sub feed__sub">Спасибо за ваш интерес к нашим продуктам. Вы можете связаться с одним из наших экспертов, используя форму обратной связи, самостоятельно написать нам на почту или позвонить по телефону.</div>
+              </div>
+              <div class="feed__right">
+                <form class="feed__form form">
+                  <div class="form__fields">
+                    <div class="fields">
+                      <div class="fields__item">
+                        <input class="fields__input" type="text" name="name" required placeholder="*Имя">
+                      </div>
+                      <div class="fields__item">
+                        <input class="fields__input" type="text" name="company" placeholder="Название компании">
+                      </div>
+                      <div class="fields__item">
+                        <input class="fields__input" type="tel" name="tel" placeholder="Телефон">
+                      </div>
+                      <div class="fields__item">
+                        <input class="fields__input" type="email" name="email" required placeholder="*e-mail">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form__accept">
-                  <label class="accept">
-                    <input class="accept__input" type="checkbox" name="accept" checked><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div class="form__accept">
+                    <label class="accept">
+                      <input class="accept__input" type="checkbox" name="accept" checked><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 8.68L5.5 13L18 1" stroke="#1B4ED1" stroke-width="2"/>
-</svg></span><span class="accept__content">Я принимаю условия <a href="/">Пользовательского соглашения</a><br>и согласен с <a href="/">Политикой конфиденциальности</a></span></span>
-                  </label>
-                </div>
-                <button class="btn form__submit" type="submit">Обсудить проект</button>
-              </form>
+</svg></span><span class="accept__content">Я принимаю условия <a href="/">Пользовательского соглашения</a> <br>и согласен с <a href="/">Политикой конфиденциальности</a></span></span>
+                    </label>
+                  </div>
+                  <button class="btn form__submit" type="submit">Обсудить проект</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -521,7 +526,7 @@
           <div class="container">
             <div class="footer__grid">
               <div class="footer__col">
-                <div class="footer__logo"><a href="#"><img src="/images/content/logo-white.svg" alt="lorem"></a></div>
+                <div class="footer__logo"><a href="/"><img src="/images/content/logo-white.svg" alt="lorem"></a></div>
               </div>
               <div class="footer__col">
                 <h3 class="footer__title">Разделы</h3>
@@ -558,6 +563,6 @@
           </div>
         </footer>
       </div>
-    </div>
+    </div><a class="up" href="#feed">Оставить заявку</a>
   </body>
 </html>

@@ -1,18 +1,60 @@
 .feed {
-  display: grid;
-  grid-template-columns: 715fr 690fr;
+
+  .container{
+    @include md-block{
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 715fr 690fr;
+
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 50px;
+    }
+  }
+
+  &__left{
+    @include md-block{
+      padding: 0 60px;
+    }
+    @include sm-block{
+      padding: 0 15px;
+    }
+  }
 
   &__title {
     margin-bottom: 10px;
   }
 
   &__sub {
-    width: min(100%, 460px);
+    --maw: 460px;
+    width: min(100%, var(--maw));
+    @include lg-block {
+      --maw: 530px;
+    }
   }
 
-  &__form{
+  &__right{
+
+  }
+
+  &__form {
     padding: 60px 120px 80px 40px;
     background-color: var(--feedBgc);
+    @include lg-block{
+      padding-top: 50px;
+    }
+    @include md-block{
+      padding: 50px 60px 80px 60px;
+    }
+    @include sm-block{
+      padding: 40px 15px;
+    }
   }
 
 }

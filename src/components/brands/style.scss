@@ -2,16 +2,39 @@
   width: 100%;
   overflow: hidden;
   padding-top: 400px;
+  @include xlg-block{
+    padding-top: 300px;
+  }
+  @include lg-block{
+    padding-top: 150px;
+  }
+  @include md-block{
+    padding-top: 0;
+  }
 
   &__title{
     text-align: center;
     margin-bottom: 65px;
+    @include lg-block{
+      margin-bottom: 50px;
+    }
+    @include sm-block{
+      margin: 0 15px 50px;
+      text-align: left;
+      br{
+        display: none;
+      }
+    }
+
   }
 
   &__list{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @include lg-block{
+        gap: 20px;
+    }
   }
 
   &__animate{

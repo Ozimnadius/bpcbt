@@ -9,6 +9,18 @@
     max-width: var(--container-big-width);
     padding: var(--container-big-padding);
     margin: 0 auto;
+    @include xlg-block{
+      padding-right: 0;
+    }
+    @include lg-block{
+      padding-left: 80px;
+    }
+    @include md-block{
+      padding-left: 40px;
+    }
+    @include sm-block{
+      padding-left: 15px;
+    }
   }
 
   &__grid{
@@ -20,8 +32,23 @@
     margin-right: auto;
   }
 
+  &__logo{
+    @include sm-block{
+      width: 104px;
+    }
+  }
+
   &__center{
     margin-right: 140px;
+    @include xlg-block{
+      margin-right: 100px;
+    }
+    @include lg-block{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      @include tr;
+    }
   }
 
   &__right{
@@ -32,14 +59,43 @@
 
   &__search{
     //opacity: 0;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__link{
+    @include sm-block{
+      display: none;
+    }
     a{
       @extend %btn;
       width: 180px;
       height: 80px;
       text-transform: uppercase;
+      @include md-block{
+        height: 70px;
+      }
+    }
+  }
+
+  &__mmenu-btn{
+    display: none;
+    @include lg-block{
+      cursor: pointer;
+      width: 80px;
+      height: 80px;
+      margin-left: -30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @include md-block{
+      height: 70px;
+    }
+    @include sm-block{
+      width: 86px;
     }
   }
 }

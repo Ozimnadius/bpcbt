@@ -41,6 +41,15 @@ body {
 
 .container {
   @include wrapper;
+  @include xlg-block{
+    max-width: 1220px;
+  }
+  @include lg-block{
+    max-width: 900px;
+  }
+  @include md-block{
+    max-width: 730px;
+  }
 }
 
 .row {

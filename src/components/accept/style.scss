@@ -29,4 +29,18 @@
       display: none;
     }
   }
+
+  &__content{
+    font-family: Inter;
+    font-size: 14px;
+
+    a{
+      color: $blue;
+    }
+    br{
+      @include sm-block{
+        display: none;
+      }
+    }
+  }
 }

@@ -4,6 +4,21 @@
   gap: 20px;
   padding-top: 100px;
   padding-bottom: 150px;
+  @include xlg-block{
+    padding-top: 150px;
+  }
+  @include lg-block{
+    padding: 100px 0;
+  }
+  @include md-block{
+    padding: 80px 0;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px 20px;
+  }
+  @include sm-block{
+    padding-top: 50px;
+    grid-template-columns: 100%;
+  }
 }
 
 .main-adv{
@@ -15,9 +30,16 @@
   &__img{
     width: 100px;
     margin-bottom: 40px;
+    @include md-block{
+      width: 90px;
+      margin-bottom: 20px;
+    }
   }
 
   &__title{
     margin-bottom: 10px;
+    @include md-block{
+      font-size: 28px;
+    }
   }
 }

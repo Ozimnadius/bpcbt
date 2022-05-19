@@ -1,11 +1,23 @@
 .main-desc {
   position: relative;
   margin-bottom: 230px;
+  @include md-block{
+    margin: 0 20px;
+    padding-bottom: 150px;
+  }
+  @include sm-block{
+    margin: 0;
+    padding-bottom: 80px;
+  }
 
   &__grid {
     position: relative;
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
+    @include sm-block{
+      padding-bottom: 100px;
+    }
   }
 
   &__left {
@@ -14,10 +26,27 @@
     left: 0;
     width: 50%;
     margin-bottom: 50px;
+    @include xlg-block{
+      margin-bottom: 90px;
+    }
+    @include lg-block{
+      margin-bottom: 70px;
+    }
+    @include md-block{
+      width: 100%;
+      position: static;
+      margin-bottom: 100px;
+    }
+    @include sm-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
     position: relative;
+    @include md-block{
+      margin-bottom: 15px;
+    }
 
     &:after {
       content: '';
@@ -28,6 +57,13 @@
       position: absolute;
       top: 50%;
       right: 20px;
+      @include lg-block{
+        width: 85px;
+        right: 10px;
+      }
+      @include md-block{
+        display: none;
+      }
     }
   }
 
@@ -37,15 +73,34 @@
     left: 0;
     right: 0;
     padding-top: 70px;
+    @include md-block{
+      position: static;
+      padding-top: 0;
+    }
   }
 
   &__content {
     width: min(100%, 460px);
     margin-bottom: 50px;
+    @include md-block{
+      width: min(100%, 490px);
+      margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin: 0;
+    }
 
     p {
       font-family: Inter;
       font-size: 20px;
+    }
+  }
+
+  &__btn{
+    @include sm-block{
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
   }
 
@@ -54,45 +109,99 @@
     top: 0;
     right: 0;
     pointer-events: none;
-
-    &-title {
-      font-size: 90px;
-      font-weight: 700;
-      text-transform: uppercase;
-      line-height: 1;
-      position: absolute;
-      top: 370px;
-      right: 340px;
-
-      -webkit-text-stroke: 1px $blue;
-      -webkit-text-fill-color: transparent;
-      text-indent: 190px;
+    @include xlg-block{
+      top: 100px;
+      right: 0px;
     }
+    @include md-block{
+      right: initial;
+      left: 0;
+      top: 250px;
+    }
+    @include sm-block{
+      top: 230px;
+    }
+
 
     img {
       display: block;
       max-width: initial;
+      @include xlg-block{
+        width: 966px;
+      }
+      @include lg-block{
+        width: 691px;
+      }
+      @include md-block{
+        width: 899px;
+      }
+      @include sm-block{
+        width: 696px;
+      }
+    }
+  }
+
+  &__map-title{
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    position: absolute;
+    top: 370px;
+    right: 340px;
+
+    -webkit-text-stroke: 1px $blue;
+    -webkit-text-fill-color: transparent;
+    text-indent: 190px;
+    @include xlg-block{
+      top: 265px;
+      right: 220px;
+    }
+    @include lg-block{
+      font-size: 70px;
+      top: 225px;
+      right: 110px;
+      text-indent: 150px;
+    }
+    @include md-block{
+      display: none;
     }
   }
 
   &__right {
     width: 50%;
+    @include xlg-block{
+      padding-left: 20px;
+    }
+    @include md-block{
+      width: 100%;
+      padding: 0;
+    }
   }
 
   &__items {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    @include md-block{
+        gap: 50px;
+    }
   }
 
   &__item {
     display: grid;
     grid-template-columns: 150px 1fr;
+    @include md-block{
+        grid-template-columns: 110px 1fr;
+    }
   }
 
   &__item-left {
     display: flex;
     justify-content: center;
+    @include md-block{
+        justify-content: flex-start;
+    }
   }
 
   &__item-right {
@@ -104,10 +213,22 @@
     font-size: 70px;
     text-transform: uppercase;
     line-height: 1;
+    @include sm-block{
+      font-size: 55px;
+    }
   }
 
   &__item-txt {
     font-family: Inter;
     font-size: 27px;
+    @include lg-block{
+      font-size: 21px;
+    }
+    @include md-block{
+      font-size: 25px;
+    }
+    @include sm-block{
+      font-size: 18px;
+    }
   }
 }

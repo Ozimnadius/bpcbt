@@ -13,6 +13,7 @@ smartgrid('./src/default/css', {
         xlg: {
             width: "1919.98px",
             fields: "20px",
+            maxWidth: "1220px",
         },
         lg: {
             width: "1439.98px",
@@ -24,13 +25,11 @@ smartgrid('./src/default/css', {
         },
         sm: {
             width: "767.98px",
-            fields: "10px",
-            offset: "10px",
+            fields: "15px",
         },
         xs: {
             width: "575.98px",
-            fields: "10px",
-            offset: "10px",
+            fields: "15px",
         }
     },
 });

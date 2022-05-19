@@ -1,5 +1,14 @@
 .page {
   padding-bottom: 200px;
+  @include lg-block{
+    padding-bottom: 150px;
+  }
+  @include md-block{
+    overflow: hidden;
+  }
+  @include sm-block{
+    padding-bottom: 100px;
+  }
 
   &__section {
     margin-bottom: 0;
