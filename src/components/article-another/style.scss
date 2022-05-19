@@ -1,5 +1,8 @@
 .article-another{
   width: 230px;
+  @include lg-block{
+    width: 200px;
+  }
 
   &__title{
     font-family: Inter;

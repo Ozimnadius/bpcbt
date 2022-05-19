@@ -1,37 +1,70 @@
-.article-more{
+.article-more {
 
-  &__top{
+  &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
   }
 
-  &__nav{
+  &__nav {
     display: flex;
     gap: 30px;
+    @include md-block {
+      display: none;
+    }
   }
 
-  &__arr{
+  &__arr {
     padding: 10px;
     color: $border;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $blue;
     }
 
-    svg{
+    svg {
       display: block;
-      path{
+
+      path {
         stroke: currentColor;
       }
     }
   }
 
-  &__slide{
+  &__swiper {
+    @include sm-block {
+      padding: 0 15px;
+    }
+
+    .swiper-wrapper {
+      @include sm-block {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  &__slide {
     width: 454px;
     box-sizing: border-box;
     height: auto;
+    @include lg-block {
+      width: 420px;
+    }
+    @include sm-block {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: none;
+    @include sm-block {
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

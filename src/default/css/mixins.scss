@@ -40,6 +40,9 @@ $vh: 1080;
 
   h3{
     font-size: 35px;
+    @include sm-block{
+      font-size: 28px;
+    }
   }
 
   img{
