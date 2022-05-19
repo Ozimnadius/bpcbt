@@ -155,10 +155,12 @@ window.addEventListener('load', function (){
        $drop.slideToggle(500);
    });
 
-   $('body').on('click', function (e){
-       if (!e.target.closest('.filter')){
-           $('.filter__drop').slideUp(500);
-       }
-   });
+   if (isMobile.phone || isMobile.tablet) {
+       $('body').on('click', function (e) {
+           if (!e.target.closest('.filter')) {
+               $('.filter__drop').slideUp(500);
+           }
+       });
+   }
 });
 //# sourceMappingURL=script.js.map

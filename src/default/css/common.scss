@@ -147,12 +147,24 @@
 .mt{
   &-100{
     margin-top: 100px !important;
+    @include md-block{
+      margin-top: 80px !important;
+    }
+    @include sm-block{
+      margin-top: 50px !important;
+    }
   }
 }
 
 .mb{
   &-150{
     margin-bottom: 150px !important;
+    @include lg-block{
+      margin-bottom: 100px !important;
+    }
+    @include md-block{
+      margin-bottom: 80px !important;
+    }
   }
 }
 
