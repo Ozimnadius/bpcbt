@@ -39,6 +39,12 @@
       padding: 10px 0;
     }
 
+    &--lg35{
+      @include lg-block{
+        padding: 14px 35px;
+      }
+    }
+
     &.active {
       color: $blue;
       border-color: $blue;

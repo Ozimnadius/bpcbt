@@ -239,10 +239,17 @@
 
         };
     .projects__top
-        .projects__btns
-            each i,x in projects
-                button(type='button' data-id=x).projects__btn
-                        span= i.name
+        .filter
+            button(type='button').filter__btn
+                span Фильтр
+                <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.23077 7.77269H24.7692V10.2272H3.23077V7.77269ZM8.07692 15.5455H19.9231V18H8.07692V15.5455ZM0 0H28V2.45454H0V0Z" fill="#D7D7D7"/>
+                </svg>
+            .filter__drop
+                .projects__btns
+                    each i,x in projects
+                        button(type='button' data-id=x).projects__btn.projects__btn--lg35.filter__item
+                                span= i.name
     .projects__bottom
         .projects__tabs
             each tab,x in projects
