@@ -25,6 +25,8 @@
   &__img {
     aspect-ratio: 690/415;
     margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
 
     img {
       width: 100%;

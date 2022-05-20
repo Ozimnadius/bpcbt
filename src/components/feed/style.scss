@@ -46,6 +46,7 @@
   &__form {
     padding: 60px 120px 80px 40px;
     background-color: var(--feedBgc);
+    position: relative;
     @include lg-block{
       padding-top: 50px;
     }
@@ -54,6 +55,26 @@
     }
     @include sm-block{
       padding: 40px 15px;
+    }
+
+    &:before{
+      content: 'Мы скоро с Вами свяжемся!';
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--feedBgc);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @extend .h3;
+    }
+
+    &.sended{
+      &:before{
+        display: flex;
+      }
     }
   }
 

@@ -4,8 +4,18 @@
   @include xlg-block {
     gap: 45px;
   }
-  @include md-block{
-      flex-direction: column;
+  @include lg-block {
+    flex-direction: column;
+    align-items: flex-start;
+    background: $bg;
+    padding: 45px 15px 45px 40px;
+    gap: 0;
+    height: calc(100vh - 69px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  @include sm-block{
+    padding: 15px 30px 30px;
   }
 
   &__item {
@@ -15,6 +25,9 @@
     &:hover {
       .nav__link {
         color: $blue;
+        @include lg-block{
+          color: $txt;
+        }
 
         svg {
           display: block;
@@ -23,6 +36,23 @@
 
       .nav__drop {
         display: block;
+        @include lg-block{
+          display: none;
+        }
+      }
+    }
+
+    &.active{
+      .nav__link {
+        color: $blue;
+        transform: translateX(35px);
+        @include sm-block{
+          transform: translateX(25px);
+        }
+
+        svg {
+          opacity: 1;
+        }
       }
     }
   }
@@ -38,6 +68,14 @@
     @include xlg-block {
       font-size: 15px;
     }
+    @include lg-block{
+      padding: 12px 0;
+      font-size: 30px;
+      @include tr;
+    }
+    @include sm-block{
+      font-size: 22px;
+    }
 
     svg {
       position: absolute;
@@ -46,6 +84,21 @@
       transform: translateY(-65%);
       bottom: 0;
       display: none;
+
+      @include lg-block{
+        width: 22px;
+        height: 22px;
+        right: calc(100% + 15px);
+        transform: translateY(-50%);
+        display: block;
+        opacity: 0;
+        @include tr;
+      }
+      @include sm-block{
+        width: 17px;
+        height: 17px;
+        right: calc(100% + 10px);
+      }
     }
   }
 
@@ -54,6 +107,9 @@
     position: absolute;
     top: calc(100% - 1px);
     left: 0;
+    @include lg-block{
+      position: static;
+    }
   }
 }
 
@@ -64,7 +120,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @include lg-block{
+    padding: 5px 20px 15px 30px;
+    width: 100%;
 
+  }
+  @include sm-block{
+    padding-left: 0;
+  }
 
   &__item {
     display: flex;
@@ -74,6 +137,9 @@
     white-space: nowrap;
     color: $txt;
     @include tr;
+    @include lg-block{
+      white-space: initial;
+    }
 
     &:hover {
       color: $blue;

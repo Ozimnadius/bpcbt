@@ -102,6 +102,7 @@
 
   &__email {
     margin-bottom: 20px;
+    display: none;
 
     a {
       @extend %footer-contact;
@@ -112,6 +113,7 @@
     margin-top: auto;
     display: flex;
     gap: 5px;
+    display: none;
     @include md-block {
       gap: 15px;
     }

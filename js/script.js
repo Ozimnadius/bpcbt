@@ -47,6 +47,125 @@ window.addEventListener("load", function () {
 });
 
 window.addEventListener('load', function () {
+    gsap.registerPlugin('ScrollTrigger');
+
+    ScrollTrigger.create({
+        trigger: ".wrapper",
+        start: `${window.innerHeight}px center`,
+        end: 'bottom top',
+        // markers: true,
+        onToggle: self => {
+            let btn = document.querySelector('.up');
+            if (self.isActive) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        },
+    });
+
+    if (document.querySelector('.main-desc__map-title')) {
+        const animMainDesc = gsap.timeline();
+        animMainDesc.fromTo(".main-desc__map-title--1", {
+            opacity: 0,
+            x: -150,
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 1.3
+        })
+            .fromTo(".main-desc__map-title--2", {
+                opacity: 0,
+                x: -150,
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 1.3
+            }, "-=1.1")
+        ScrollTrigger.create({
+            trigger: ".main-desc__map-title",
+            animation: animMainDesc,
+            start: 'center bottom',
+            // markers: true
+        });
+    }
+
+    if (document.querySelector('.import-banner__title')) {
+        const animMainDesc = gsap.timeline();
+        animMainDesc.fromTo(".import-banner__title--1", {
+            opacity: 0,
+            x: 150,
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 1.3
+        })
+            .fromTo(".import-banner__title--2", {
+                opacity: 0,
+                x: 150,
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 1.3
+            }, "-=1.1")
+        ScrollTrigger.create({
+            trigger: ".import-banner__title",
+            animation: animMainDesc,
+            start: 'top center',
+            // markers: true
+        });
+    }
+
+    if (document.querySelector('.partners__slogan')) {
+        const animMainDesc = gsap.timeline();
+        animMainDesc.fromTo(".partners__slogan--1", {
+            opacity: 0,
+            x: 150,
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 1.3
+        })
+            .fromTo(".partners__slogan--2", {
+                opacity: 0,
+                x: 150,
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 1.3
+            }, "-=1.1")
+        ScrollTrigger.create({
+            trigger: ".partners__slogan",
+            animation: animMainDesc,
+            start: 'top center',
+            // markers: true
+        });
+    }
+
+});
+window.addEventListener('load', function () {
+    if (window.matchMedia("(max-width: 1439.98px)").matches) {
+        $('.nav__link').on('click', function (e) {
+            let $this = $(this),
+                $item = $(this).closest('.nav__item'),
+                $drop = $item.find('.nav__drop');
+
+            if ($drop.length === 0){
+                return;
+            }
+
+            $item.toggleClass('active');
+            $drop.slideToggle(500);
+        });
+    }
+
+    $('.header__mmenu-btn').on('click', function (e){
+        $(this).toggleClass('active');
+        $('.header__center').toggleClass('active');
+        $('body').toggleClass('ovh');
+    });
+});
+window.addEventListener('load', function () {
 
     document.querySelectorAll('.platform').forEach(i=>{
 
@@ -165,4 +284,31 @@ window.addEventListener('load', function (){
        });
    }
 });
+window.addEventListener('load', function () {
+    document.querySelector('.feed__form').addEventListener('submit', function (e){
+        e.preventDefault();
+        sendFeedData(this);
+    });
+});
+
+function sendFeedData(form) {
+    let data = $(form).serialize();
+
+    $.ajax({
+        dataType: "json",
+        type: "POST",
+        url: '/php/ajax.php',
+        data: data,
+        success: function (result) {
+            if (result.status) {
+                form.classList.add('sended');
+            } else {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        },
+        error: function (result) {
+            alert('Что-то пошло не так, попробуйте еще раз!!!');
+        }
+    });
+}
 //# sourceMappingURL=script.js.map

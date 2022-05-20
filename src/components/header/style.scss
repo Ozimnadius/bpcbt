@@ -45,10 +45,16 @@
     }
     @include lg-block{
       position: fixed;
-      top: 80px;
+      top: 69px;
+      width: 100%;
       left: -100%;
       @include tr;
     }
+
+    &.active{
+      left: 0;
+    }
+
   }
 
   &__right{
@@ -97,6 +103,24 @@
     }
     @include sm-block{
       width: 86px;
+    }
+
+    &.active{
+      .mmenu-btn{
+        &__line{
+          &:nth-child(2){
+            opacity: 0;
+          }
+          &:nth-child(1){
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          }
+          &:nth-child(3){
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+        }
+      }
     }
   }
 }
