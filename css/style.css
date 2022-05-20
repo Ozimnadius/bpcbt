@@ -2177,6 +2177,7 @@ input, textarea {
 }
 .import-dev__img {
   aspect-ratio: 690/484;
+  overflow: hidden;
 }
 @media screen and (max-width: 1439.98px) {
   .import-dev__img {
@@ -2580,8 +2581,10 @@ input, textarea {
     border-color: #d7d7d7;
   }
 }
-.import-about__item:nth-child(even) {
-  border-color: transparent;
+@media screen and (max-width: 767.98px) {
+  .import-about__item:nth-child(even) {
+    border-color: transparent;
+  }
 }
 .import-about__item:nth-child(1), .import-about__item:nth-child(2), .import-about__item:nth-child(3), .import-about__item:nth-child(4) {
   padding-bottom: 90px;
@@ -2651,6 +2654,7 @@ input, textarea {
   }
 }
 .projects__btn {
+  cursor: pointer;
   color: #7c7c7c;
   font-size: 20px;
   font-weight: 400;
@@ -3824,6 +3828,15 @@ input, textarea {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+@media screen and (max-width: 767.98px) {
+  .up {
+    width: 70px;
+    height: 70px;
+    right: 15px;
+    bottom: 15px;
+    font-size: 12px;
+  }
+}
 .up.active {
   pointer-events: all;
   opacity: 1;
@@ -3840,6 +3853,7 @@ input, textarea {
   position: relative;
 }
 .filter__btn {
+  cursor: pointer;
   display: none;
   gap: 15px;
   font-size: 20px;

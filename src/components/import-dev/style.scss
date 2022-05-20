@@ -18,6 +18,7 @@
 
   &__img {
     aspect-ratio: 690/484;
+    overflow: hidden;
     @include lg-block{
         aspect-ratio: 860/484;
     }

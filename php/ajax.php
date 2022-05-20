@@ -47,7 +47,7 @@ function sendMail()
     try {
         //Recipients
         $mail->setFrom('bt@bpcbt.com', 'БПЦ');
-        $mail->addAddress('mikhail-seregin@yandex.ru', 'Joe User');
+        $mail->addAddress('a.kozhurina@bpcbt.com', 'БПЦ');
 
         //Content
         $mail->isHTML(true);

@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
             tabSelector: '.projects__tab'
         });
 
-        if (isMobile.phone || isMobile.tablet){
+        if (window.matchMedia("(max-width: 1023.98px)").matches) {
             // console.log('MOBILE');
         } else {
             sliders.forEach(function (i, x) {
@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
                     prev = nav.querySelector('.projects__prev'),
                     next = nav.querySelector('.projects__next');
 
-                swiper = new Swiper(swiper, {
+                new Swiper(swiper, {
                     slidesPerView: 'auto',
                     speed: 500,
                     spaceBetween: 40,

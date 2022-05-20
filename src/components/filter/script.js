@@ -7,7 +7,7 @@ window.addEventListener('load', function (){
        $drop.slideToggle(500);
    });
 
-   if (isMobile.phone || isMobile.tablet) {
+   if (window.matchMedia("(max-width: 1023.98px)").matches) {
        $('body').on('click', function (e) {
            if (!e.target.closest('.filter')) {
                $('.filter__drop').slideUp(500);

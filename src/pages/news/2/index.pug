@@ -1,0 +1,32 @@
+extends ../../../main
+
+block variables
+    - var title = 'Компания БПЦ Банковские технологии выступила на конференции «Banks IT Day 2022» издания Tadviser'
+
+block content
+    main.page
+        section.page__section
+            - var img = '/images/content/news/2.jpg';
+            include ../../../components/article-banner/index
+        section.page__section.mb-150
+            .container
+                .article
+                    .article__grid
+                        .article__left
+                            .article__date 6 апреля  |  Новости БПЦ
+                        .article__center
+                            h2.article__title Компания БПЦ Банковские технологии выступила на конференции «Banks IT Day 2022» издания Tadviser
+                            .article__content.content
+                                p БПЦ Банковские технологии выступила на офлайн-конференции «Banks IT Day 2022» издания Tadviser. Маргарита Миронова, руководитель финансового сектора компании БПЦ Банковские Технологии сделала доклад по теме: Импортозамещение в Банках: Время пришло. Опыт компании БПЦ Банковские технологии.
+                                p На конференции присутствовало около 100 представителей банков и других отраслей бизнеса. Мы поделились  планами по переводу продуктов на российские СУБД, рассказали об уже реализованных проектах.
+                        .article__right
+                            .article-another
+                                include ../../../components/article-another/index
+
+        section.page__section
+            include ../../../components/article-more/index
+
+
+
+
+
