@@ -1913,8 +1913,8 @@ input, textarea {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-2529px);
-            transform: translateX(-2529px);
+    -webkit-transform: translateX(-3290px);
+            transform: translateX(-3290px);
   }
 }
 
@@ -1924,14 +1924,14 @@ input, textarea {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-2529px);
-            transform: translateX(-2529px);
+    -webkit-transform: translateX(-3290px);
+            transform: translateX(-3290px);
   }
 }
 @-webkit-keyframes sliderScrollReverse {
   0% {
-    -webkit-transform: translateX(-2529px);
-            transform: translateX(-2529px);
+    -webkit-transform: translateX(-3290px);
+            transform: translateX(-3290px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -1940,8 +1940,8 @@ input, textarea {
 }
 @keyframes sliderScrollReverse {
   0% {
-    -webkit-transform: translateX(-2529px);
-            transform: translateX(-2529px);
+    -webkit-transform: translateX(-3290px);
+            transform: translateX(-3290px);
   }
   100% {
     -webkit-transform: translateX(0);
