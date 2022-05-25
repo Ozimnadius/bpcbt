@@ -1,12 +1,11 @@
-.news-item
-    .news-item__date= i.date
-    .news-item__img
+a(href=i.href).news-item
+    span.news-item__date= i.date
+    span.news-item__img
         img(src=i.img alt="lorem")
-    .news-item__title.h4= i.title
-    .news-item__desc= i.desc
-    .news-item__link.link
-        a(href=i.href)
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 16L16 1M16 1V16M16 1H1" stroke="#1B4ED1" stroke-width="2"/>
-            </svg>
-            span Читать
+    span.news-item__title.h4= i.title
+    span.news-item__desc= i.desc
+    span.news-item__link.link
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 16L16 1M16 1V16M16 1H1" stroke="#1B4ED1" stroke-width="2"/>
+        </svg>
+        span Читать

@@ -4,6 +4,16 @@
   position: relative;
   z-index: 100;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include tr;
+
+  &.hide{
+    transform: translateY(-100px);
+  }
+
   &__container{
     width: 100%;
     max-width: var(--container-big-width);
@@ -78,7 +88,7 @@
     a{
       @extend %btn;
       width: 180px;
-      height: 80px;
+      height: 81px;
       text-transform: uppercase;
       @include md-block{
         height: 70px;

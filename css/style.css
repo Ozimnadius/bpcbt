@@ -95,6 +95,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 81px;
+}
+@media screen and (max-width: 1023.98px) {
+  .wrapper {
+    padding-top: 70px;
+  }
 }
 
 .container {
@@ -252,6 +258,16 @@ input, textarea {
 
 .link {
   --link-color: #1b4ed1;
+  color: var(--link-color);
+  font-size: 22px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .link a {
   color: var(--link-color);
@@ -411,6 +427,16 @@ input, textarea {
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
   position: relative;
   z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header.hide {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 .header__container {
   width: 100%;
@@ -500,7 +526,7 @@ input, textarea {
 }
 .header__link a {
   width: 180px;
-  height: 80px;
+  height: 81px;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1023.98px) {
@@ -2080,6 +2106,8 @@ input, textarea {
   gap: 15px;
 }
 .accept__check {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 23px;
   height: 23px;
   border: 1px solid #232323;
@@ -3866,6 +3894,7 @@ input, textarea {
           justify-content: flex-end;
   padding-bottom: 15px;
   border-bottom: 1px solid #d7d7d7;
+  color: #ababab;
 }
 @media screen and (max-width: 1023.98px) {
   .filter__btn {

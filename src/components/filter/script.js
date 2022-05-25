@@ -9,7 +9,7 @@ window.addEventListener('load', function (){
 
    if (window.matchMedia("(max-width: 1023.98px)").matches) {
        $('body').on('click', function (e) {
-           if (!e.target.closest('.filter')) {
+           if (!e.target.closest('.filter') || e.target.closest('.filter__item')) {
                $('.filter__drop').slideUp(500);
            }
        });

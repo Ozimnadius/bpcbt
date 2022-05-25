@@ -2,9 +2,10 @@ nav.nav
     each i in nav
         .nav__item
             a(href=i.href).nav__link
-                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
-                </svg>
+                if i.list
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L12 12M12 12V1M12 12H1" stroke="#1B4ED1"/>
+                    </svg>
                 span= i.title
             if i.list
                 .nav__drop

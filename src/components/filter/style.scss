@@ -13,6 +13,7 @@
     justify-content: flex-end;
     padding-bottom: 15px;
     border-bottom: 1px solid $border;
+    color: #ababab;
     @include md-block{
       display: flex;
     }

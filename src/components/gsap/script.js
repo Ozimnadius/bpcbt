@@ -94,4 +94,20 @@ window.addEventListener('load', function () {
         });
     }
 
+    ScrollTrigger.create({
+        trigger: ".wrapper",
+        start: `100px top`,
+        end: 'bottom top',
+        // markers: true,
+        onUpdate: self => {
+            if (self.isActive) {
+                if (self.direction == 1) {
+                    $('.header').addClass('hide');
+                } else {
+                    $('.header').removeClass('hide');
+                }
+            }
+        },
+    });
+
 });

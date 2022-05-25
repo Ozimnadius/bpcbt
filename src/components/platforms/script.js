@@ -8,13 +8,16 @@ window.addEventListener('load', function () {
         wrap.style.marginBottom = `-${btn.offsetHeight}px`;
     });
 
-    $('.platform').on('click', function () {
+    $('.platform').on('click', function (e) {
         let $this = $(this),
             $wrap = $this.find('.platform__wrap');
 
         if ($this.hasClass('active')) {
-            $this.removeClass('active');
-            $wrap.slideUp(500);
+            if ($(e.target).closest('.platform__content').length == 0){
+                $this.removeClass('active');
+                $wrap.slideUp(500);
+            }
+
         } else {
             $this.addClass('active');
             $wrap.slideDown(500);
