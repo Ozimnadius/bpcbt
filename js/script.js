@@ -44,7 +44,16 @@ window.addEventListener("load", function () {
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
 
+    setMainOffset();
+    window.addEventListener('resize', setMainOffset);
+
 });
+
+function setMainOffset() {
+    let fullW = document.body.clientWidth;
+    let containerW = document.querySelectorAll('.container')[1].clientWidth - 40;
+    document.body.style.setProperty('--main-offset', `${(fullW - containerW) / 2}px`);
+}
 
 window.addEventListener('load', function () {
     gsap.registerPlugin('ScrollTrigger');
@@ -330,4 +339,16 @@ function sendFeedData(form) {
         }
     });
 }
+window.addEventListener('load', function (){
+    new Swiper('.event-archive__swiper', {
+        slidesPerView: 'auto',
+        speed: 500,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.event-archive__next',
+            prevEl: '.event-archive__prev',
+        },
+    });
+});
 //# sourceMappingURL=script.js.map

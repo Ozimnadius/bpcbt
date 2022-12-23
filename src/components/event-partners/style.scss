@@ -1,0 +1,18 @@
+.event-partners{
+  background-color: $grey-light;
+  padding: 120px 0;
+
+  &__title{
+    margin-bottom: 70px;
+  }
+
+  &__items{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 15px;
+  }
+
+  &__item{
+    border: 1px solid $grey;
+  }
+}

@@ -9,6 +9,15 @@
     height: 466px;
   }
 
+  &--center{
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
   .container{
     @include md-block{
       max-width: 650px;
@@ -30,5 +39,9 @@
     @include sm-block{
       font-size: 18px;
     }
+  }
+
+  &__btn{
+    margin-top: 20px;
   }
 }

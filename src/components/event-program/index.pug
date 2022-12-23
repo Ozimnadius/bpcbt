@@ -1,0 +1,37 @@
+.event-program
+    h2.event-program__title.h2 Программа мероприятия
+    .event-program__list
+        -
+            var data = [
+                {
+                    time: '10.00-10.20',
+                    person: '<span class="color-blue">Любовь Орлова</span>, Директор, АНО "Открытый код"',
+                    role: 'Вступительное слово/ Open Source в текущей реальности'
+                },
+                {
+                    time: '10.20-10.35',
+                    person: '<span class="color-blue">Александр Петренко</span>, Заведующий отделом технологий программирования, ИСП РАН',
+                    role: 'Open Source в научно-исследовательской деятельности и образовании'
+                },
+                {
+                    time: '10.35-10.50',
+                    person: '<span class="color-blue">Любовь Орлова</span>, Директор, АНО "Открытый код"',
+                    role: 'Переход на СПО и отечественные IT. Когда облака рассеялись'
+                },
+                {
+                    time: '10.50-11.05',
+                    person: '<span class="color-blue">Андрей Разин</span>, Заместитель руководителя направления по инфраструктуре ЦОД, ГК«ICL»',
+                    role: 'Как перейти на свободное ПО без сбоев в работе и рисков для компании?'
+                },
+                {
+                    time: '11.05-11.20',
+                    person: '<span class="color-blue">Любовь Орлова</span>, Директор, АНО "Открытый код"',
+                    role: 'Вступительное слово/ Open Source в текущей реальности'
+                },
+
+            ];
+        each i in data
+            .event-program__item
+                .event-program__time= i.time
+                .event-program__person!=i.person
+                .event-program__role= i.role

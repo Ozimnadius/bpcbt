@@ -39,4 +39,13 @@ window.addEventListener("load", function () {
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
 
+    setMainOffset();
+    window.addEventListener('resize', setMainOffset);
+
 });
+
+function setMainOffset() {
+    let fullW = document.body.clientWidth;
+    let containerW = document.querySelectorAll('.container')[1].clientWidth - 40;
+    document.body.style.setProperty('--main-offset', `${(fullW - containerW) / 2}px`);
+}

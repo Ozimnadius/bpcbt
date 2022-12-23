@@ -1,0 +1,43 @@
+.event-archive{
+  padding: 100px 0;
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__nav{
+    display: flex;
+    gap: 55px;
+  }
+
+  &__arr{
+    color: #1b4ed1;
+
+    &.swiper-button-disabled{
+      color: $border;
+    }
+  }
+
+  &__swiper{
+    margin-left: calc(0px - var(--main-offset, 245px));
+    margin-right: calc(0px - var(--main-offset, 245px));
+    padding-left: var(--main-offset, 245px);
+    margin-bottom: 35px;
+  }
+
+  &__slide{
+    box-sizing: border-box;
+    width: 454px;
+    height: auto;
+  }
+
+  &__link{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}

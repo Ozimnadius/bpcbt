@@ -74,8 +74,7 @@
   }
 
   &__search{
-    opacity: 0;
-    pointer-events: none;
+
     @include sm-block{
       display: none;
     }

@@ -1,0 +1,16 @@
+.event-partners
+    .container
+        h2.event-partners__title.h2 партнеры мероприятия
+        .event-partners__items
+            -
+                var data = [
+                    "/images/content/event-partners/1.webp",
+                    "/images/content/event-partners/2.webp",
+                    "/images/content/event-partners/3.webp",
+                    "/images/content/event-partners/1.webp",
+                    "/images/content/event-partners/2.webp",
+                    "/images/content/event-partners/3.webp",
+                ]
+            each i in data
+                .event-partners__item
+                    img(src=i alt="partner")

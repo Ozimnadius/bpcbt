@@ -1,0 +1,36 @@
+extends ../../main
+
+block variables
+    - var title = 'Вебинар «Миграция на postgres. Практика»'
+
+block content
+    main.page
+        section.page__section
+            -
+                var banner = {
+                    img: '/images/content/event/banner.webp',
+                    title: 'ВЕБИНАР «МИГРАЦИЯ НА<br>POSTGRES. ПРАКТИКА»',
+                    txt: '9 февраля 2023 года CNews проводит конференцию "Business Process Management 2023"',
+                    btn: 'Принять участие',
+                    btnEvent: 'reg',
+                    dopCls: 'banner--center'
+                };
+            include ../../components/banner/index
+        section.page__section
+            include ../../components/event-about/index
+        section.page__section
+            .container
+                include ../../components/event-program/index
+        section.page__section
+            include ../../components/event-speakers/index
+        section.page__section
+            include ../../components/event-partners/index
+        section.page__section
+            .container
+                include ../../components/event-archive/index
+
+
+
+
+
+

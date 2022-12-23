@@ -1,0 +1,56 @@
+.event-archive
+    .event-archive__top
+        h2.event-archive__title.h2 Архив мероприятий
+        .event-archive__nav
+            button(type='button').event-archive__arr.event-archive__prev
+                <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 30L2 15.5L16 1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            button(type='button').event-archive__arr.event-archive__next
+                <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 30L15 15.5L1 1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+
+    .event-archive__slider
+        .event-archive__swiper.swiper
+            .swiper-wrapper
+                -
+                    var data = [
+                        {
+                            date: '17 апреля',
+                            img: '/images/content/news/1.jpg',
+                            title: 'СмартВиста День состоится 2 июня',
+                            desc: '2 июня 2022 г. Состоится очередное мероприятие СмартВиста День.',
+                            href: '/news/1/',
+                        },
+                        {
+                            date: '06 апреля',
+                            img: '/images/content/news/2.jpg',
+                            title: 'Компания БПЦ Банковские технологии выступила на конференции «Banks IT Day 2022» издания Tadviser',
+                            desc: 'БПЦ Банковские технологии выступила на офлайн-конференции...',
+                            href: '/news/2/',
+                        },
+                        {
+                            date: '3 апреля',
+                            img: '/images/content/news/3.jpg',
+                            title: 'Мобильное приложение для инвестирования от БПЦ внедрено в Севергазбанке',
+                            desc: 'В декабре 2021 года БПЦ совместно с Севергазбанком запустили...',
+                            href: '/news/3/',
+                        },
+                        {
+                            date: '17 апреля',
+                            img: '/images/content/news/4.jpg',
+                            title: 'Мошенничество – новая старая чума',
+                            desc: 'Банки и другие финансовые организации являются объектами критической информационной инфраструктуры, поэтому они должны быть...',
+                            href: '/news/4/',
+                        },
+                    ];
+                each i in data
+                    .swiper-slide.event-archive__slide
+                        include ../news/item
+        .event-archive__link.link
+            a(href="#")
+                <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 21L16 6M16 6V21M16 6H1" stroke="#1B4ED1" stroke-width="2"/>
+                </svg>
+                span смотреть все

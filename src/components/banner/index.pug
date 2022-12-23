@@ -1,5 +1,7 @@
-div(style=`background-image: url(${banner.img});`).banner
+div(style=`background-image: url(${banner.img});` class=banner.dopCls).banner
     .container
-        .banner__title.h1= banner.title
+        .banner__title.h1!=banner.title
         if banner.txt
             .banner__txt.sub= banner.txt
+        if banner.btn
+            button(type='button' data-event=banner.btnEvent).banner__btn.btn= banner.btn

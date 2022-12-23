@@ -1,0 +1,53 @@
+.event-speakers
+    .container
+        h2.event-speakers__title.h2 Спикеры
+        .event-speakers__items
+            -
+                var data = [
+                    {
+                        img: '/images/content/event-speakers/1.webp',
+                        name: 'Александр Петренко',
+                        prof: 'Заведующий отделом технологий программирования, Институт Системного Программирования РАН'
+                    },
+                    {
+                        img: '/images/content/event-speakers/2.webp',
+                        name: 'Любовь Орлова',
+                        prof: 'Директор, АНО "Открытый код"'
+                    },
+                    {
+                        img: '/images/content/event-speakers/empty.webp',
+                        name: 'Людмила Гонтарь',
+                        prof: 'Руководитель Центра компетенций по цифровизации процессов ФРЦЭ, руководитель проектов РГАИС, эксперт ICANN,ICTPR'
+                    },
+                    {
+                        img: '/images/content/event-speakers/empty.webp',
+                        name: 'Иван Панченко',
+                        prof: 'Заместитель генерального директора, "Postgres Professional"'
+                    },
+                    {
+                        img: '/images/content/event-speakers/3.webp',
+                        name: 'Александр Петренко',
+                        prof: 'Заведующий отделом технологий программирования, Институт Системного Программирования РАН'
+                    },
+                    {
+                        img: '/images/content/event-speakers/4.webp',
+                        name: 'Любовь Орлова',
+                        prof: 'Директор, АНО "Открытый код"'
+                    },
+                    {
+                        img: '/images/content/event-speakers/1.webp',
+                        name: 'Людмила Гонтарь',
+                        prof: 'Руководитель Центра компетенций по цифровизации процессов ФРЦЭ, руководитель проектов РГАИС, эксперт ICANN,ICTPR'
+                    },
+                    {
+                        img: '/images/content/event-speakers/2.webp',
+                        name: 'Иван Панченко',
+                        prof: 'Заместитель генерального директора, "Postgres Professional"'
+                    },
+                ];
+            each i in data
+                .event-speakers__item.event-speaker
+                    .event-speaker__img
+                        img(src=i.img alt=i.name)
+                    .event-speaker__name= i.name
+                    .event-speaker__prof= i.prof

@@ -53,6 +53,13 @@ $vh: 1080;
     font-weight: 700;
   }
 
+  a{
+    text-decoration: underline;
+    &:hover{
+      color: $blue;
+    }
+  }
+
 
 }
 

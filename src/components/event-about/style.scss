@@ -1,0 +1,63 @@
+.event-about{
+  background-color: $grey-light;
+  padding: 80px 0;
+
+  &__grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+  }
+
+  &__left{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__items{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 65px 20px;
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    font-family: Inter, serif;
+
+    &-name{
+      color: $grey;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    &-val{
+      color: $blue;
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
+  &__contacts{
+    margin-top: auto;
+
+    &-title{
+      margin-bottom: 16px;
+    }
+
+    &-items{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-item{
+      font-family: Inter, serif;
+      display: flex;
+      flex-direction: column;
+
+      a{
+        &:hover{
+          color: $blue;
+        }
+      }
+    }
+  }
+}

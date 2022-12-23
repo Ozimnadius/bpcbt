@@ -17,7 +17,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: calc(950 / 1920 * 100%);
+    width: calc(950/1920 * 100%);
     @include md-block {
       position: relative;
       width: 100%;
