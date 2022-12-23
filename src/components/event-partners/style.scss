@@ -1,18 +1,30 @@
-.event-partners{
+.event-partners {
   background-color: $grey-light;
   padding: 120px 0;
+  @include sm-block{
+    padding: 60px 0;
+  }
 
-  &__title{
+  &__title {
     margin-bottom: 70px;
+    @include sm-block{
+      font-size: 45px;
+    }
   }
 
-  &__items{
-    display:grid;
-    grid-template-columns: repeat(6,1fr);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
+    @include lg-block {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  &__item{
+  &__item {
     border: 1px solid $grey;
   }
 }

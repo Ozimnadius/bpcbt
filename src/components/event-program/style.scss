@@ -1,8 +1,19 @@
 .event-program{
   padding: 100px 0;
+  @include sm-block{
+    padding: 60px 0;
+  }
 
   &__title{
     margin-bottom: 45px;
+    @include sm-block{
+      font-size: 45px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list{
+    margin: 0 -15px;
   }
 
   &__item{
@@ -11,6 +22,19 @@
     grid-template-columns: 180px 1fr 1fr;
     grid-template-areas: 'time person role';
     font-family: Inter, serif;
+    @include lg-block{
+        grid-template-columns: 180px 1fr;
+      grid-template-areas: 'time person' 'time role';
+    }
+    @include md-block{
+      padding: 20px 0;
+    }
+    @include sm-block{
+      grid-template-columns: 100%;
+      grid-template-areas: 'time' 'person' 'role';
+      gap: 12px;
+      padding: 20px 15px;
+    }
 
     &:nth-child(even){
       background-color: $grey-light;
@@ -23,6 +47,13 @@
     display: flex;
     align-items: center;
     border-right: 1px solid #c6c6c6;
+    @include md-block{
+      padding: 0 30px;
+    }
+    @include sm-block{
+      padding: 0;
+      border: none;
+    }
   }
 
   &__time{
@@ -33,10 +64,16 @@
     color: $blue;
     font-size: 18px;
     font-weight: 500;
+    @include sm-block{
+      padding: 0;
+    }
   }
 
   &__person{
     grid-area: person;
+    @include lg-block{
+      border: none;
+    }
   }
 
   &__role{

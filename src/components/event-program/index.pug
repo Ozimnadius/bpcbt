@@ -32,6 +32,9 @@
             ];
         each i in data
             .event-program__item
-                .event-program__time= i.time
-                .event-program__person!=i.person
-                .event-program__role= i.role
+                .event-program__time
+                    div= i.time
+                .event-program__person
+                    div!=i.person
+                .event-program__role
+                    div= i.role

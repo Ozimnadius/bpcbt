@@ -1,60 +1,109 @@
-.event-about{
+.event-about {
   background-color: $grey-light;
   padding: 80px 0;
-
-  &__grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 80px;
+  @include sm-block {
+    padding: 50px 0;
   }
 
-  &__left{
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    @include xlg-block {
+      gap: 40px;
+    }
+    @include lg-block {
+      gap: 20px;
+    }
+    @include md-block {
+      grid-template-columns: 100%;
+      gap: 100px;
+    }
+    @include sm-block {
+      gap: 50px;
+    }
+  }
+
+  &__left {
     display: flex;
     flex-direction: column;
   }
 
-  &__items{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     gap: 65px 20px;
     margin-bottom: 20px;
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 50px;
+    }
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+      margin-bottom: 85px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
   }
 
-  &__item{
+  &__item {
     font-family: Inter, serif;
 
-    &-name{
+    &-name {
       color: $grey;
       font-size: 20px;
       margin-bottom: 8px;
     }
 
-    &-val{
+    &-val {
       color: $blue;
       font-size: 36px;
       font-weight: 500;
+      @include md-block {
+        font-size: 32px;
+      }
     }
   }
 
-  &__contacts{
+  &__contacts {
     margin-top: auto;
 
-    &-title{
+    &-title {
       margin-bottom: 16px;
+      @include sm-block{
+        font-size: 28px;
+      }
     }
 
-    &-items{
+    &-items {
       display: flex;
       justify-content: space-between;
+      line-height: 130%;
+      @include lg-block {
+        flex-direction: column;
+        justify-content: initial;
+      }
+      @include md-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      @include sm-block{
+          grid-template-columns: 100%;
+      }
     }
 
-    &-item{
+    &-item {
       font-family: Inter, serif;
       display: flex;
       flex-direction: column;
 
-      a{
-        &:hover{
+      a {
+        &:hover {
           color: $blue;
         }
       }

@@ -2,6 +2,7 @@
 // @prepros-append default/js/common.js
 
 //COMPONENTS
+// @prepros-append components/events/script.js
 // @prepros-append components/gsap/script.js
 // @prepros-append components/header/script.js
 // @prepros-append components/platforms/script.js

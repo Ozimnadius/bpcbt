@@ -3,18 +3,36 @@
 .event-speakers {
   background-color: $blue;
   padding: 130px 0;
-
   color: $bg;
+  @include sm-block{
+    padding: 50px 0;
+  }
 
   &__title {
     color: $grey-light;
     margin-bottom: 40px;
+    @include sm-block{
+      font-size: 45px;
+    }
   }
 
-  &__items{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @include xlg-block {
+      gap: 16px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
   }
 }
 
@@ -25,20 +43,23 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @include xlg-block {
+    padding: 40px 24px;
+  }
 
-  &__img{
-    width: math.percentage(180/335);
+  &__img {
+    width: math.percentage(180/275);
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       padding-top: 100%;
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       inset: 0;
@@ -48,14 +69,26 @@
     }
   }
 
-  &__name{
+  &__name {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    @include xlg-block {
+      font-size: 16px;
+    }
+    @include md-block{
+      font-size: 18px;
+    }
   }
 
-  &__prof{
+  &__prof {
     font-family: Inter, serif;
     font-size: 15px;
+    @include xlg-block {
+      font-size: 13px;
+    }
+    @include md-block{
+      font-size: 15px;
+    }
   }
 }

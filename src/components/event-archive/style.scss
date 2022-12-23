@@ -1,7 +1,10 @@
-.event-archive{
+.event-archive {
   padding: 100px 0;
+  @include sm-block{
+    padding: 60px 0;
+  }
 
-  &__top{
+  &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,33 +12,60 @@
     margin-bottom: 40px;
   }
 
-  &__nav{
-    display: flex;
-    gap: 55px;
+  &__title{
+    @include sm-block{
+      font-size: 45px;
+    }
   }
 
-  &__arr{
+  &__nav {
+    display: flex;
+    gap: 55px;
+    @include sm-block{
+      display: none;
+    }
+  }
+
+  &__arr {
     color: #1b4ed1;
 
-    &.swiper-button-disabled{
+    &.swiper-button-disabled {
       color: $border;
     }
   }
 
-  &__swiper{
+  &__swiper {
     margin-left: calc(0px - var(--main-offset, 245px));
     margin-right: calc(0px - var(--main-offset, 245px));
     padding-left: var(--main-offset, 245px);
     margin-bottom: 35px;
+    @include sm-block{
+      margin: 0 0 40px;
+      padding: 0;
+    }
+
+    .swiper-wrapper{
+      @include sm-block{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
   }
 
-  &__slide{
+  &__slide {
     box-sizing: border-box;
     width: 454px;
     height: auto;
+    @include lg-block {
+      width: 420px;
+    }
+    @include sm-block{
+      width: 100%;
+    }
   }
 
-  &__link{
+  &__link {
     display: flex;
     justify-content: flex-end;
   }

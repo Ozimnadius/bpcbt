@@ -20,11 +20,11 @@
   opacity: 0;
   @include tr;
   @include sm-block{
-    width: 70px;
-    height: 70px;
-    right: 15px;
-    bottom: 15px;
-    font-size: 12px;
+    width: 60px;
+    height: 60px;
+    right: 10px;
+    bottom: 10px;
+    font-size: 10px;
   }
 
   &.active{

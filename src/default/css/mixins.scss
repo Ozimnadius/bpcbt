@@ -38,14 +38,14 @@ $vh: 1080;
     color: currentColor;
   }
 
-  h3{
+  h3 {
     font-size: 35px;
-    @include sm-block{
+    @include sm-block {
       font-size: 28px;
     }
   }
 
-  img{
+  img {
     margin-bottom: var(--mb);
   }
 
@@ -53,9 +53,10 @@ $vh: 1080;
     font-weight: 700;
   }
 
-  a{
+  a {
     text-decoration: underline;
-    &:hover{
+
+    &:hover {
       color: $blue;
     }
   }
@@ -66,3 +67,6 @@ $vh: 1080;
 @mixin tr() {
   transition: $transition;
 }
+
+
+

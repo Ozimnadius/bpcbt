@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 25px;
 
-  %input{
+  &__input{
     padding: 12px 0;
     color: $txt;
     font-family: Inter;
@@ -15,15 +15,9 @@
     &:focus,&:active{
       border-color: $blue;
     }
-    
+
     &:focus:invalid,&:active:invalid{
       border-color: $red;
     }
-  }
-
-
-
-  &__input{
-    @extend %input;
   }
 }
