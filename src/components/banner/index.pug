@@ -4,4 +4,4 @@ div(style=`background-image: url(${banner.img});` class=banner.dopCls).banner
         if banner.txt
             .banner__txt.sub= banner.txt
         if banner.btn
-            button(type='button' data-event=banner.btnEvent).banner__btn.btn= banner.btn
+            button(type='button' data-event=banner.btnEvent data-name=banner.btnName).banner__btn.btn= banner.btn

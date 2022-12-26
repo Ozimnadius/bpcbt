@@ -20,6 +20,12 @@
 
 .btn {
   @extend %btn;
+
+
+  &:disabled{
+    pointer-events: none;
+    opacity: .7;
+  }
 }
 
 .link{
@@ -187,4 +193,8 @@
 
 .breadcrumb.breadcrumb_new {
   margin: -30px 0 30px;
+}
+
+.fancybox-button{
+  display: none !important;
 }

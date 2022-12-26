@@ -73,7 +73,9 @@ class Events {
             submit: {
                 sendForm: this.sendForm
             }
-        }
+        };
+
+        this.templates = templates;
 
         this.init();
     }
@@ -112,33 +114,46 @@ class Events {
 
     openForm(e, elem) {
         e.preventDefault();
-        console.log('Open form');
-        console.log(this);
-        console.log(e);
-        console.log(elem);
+
+        let dataset = elem.dataset;
+
+        this.templates.open(dataset.name);
+        let recaptcha  = document.querySelector('.g-recaptcha');
+        if (recaptcha) {
+            let input = document.querySelector('.form__captcha-input');
+            grecaptcha.render(recaptcha, {
+                'sitekey': recaptcha.dataset.sitekey,
+                'callback' : function(response) {
+                    if (response){
+                        input.value=response;
+                    } else {
+                        input.value='';
+                    }
+                },
+                'expired-callback' : function (response){
+                    input.value='';
+                }
+            });
+        }
     }
 
     closeForm(e, elem) {
         e.preventDefault();
-        console.log('Close form');
-        console.log(this);
-        console.log(e);
-        console.log(elem);
+
+        this.templates.close();
     }
 
     sendForm(e, elem) {
         e.preventDefault();
-        console.log('Send form');
-        console.log(this);
-        console.log(e);
-        console.log(elem);
 
         fetch(elem.action, {
             method: 'POST',
             body: new FormData(elem)
         }).then(response => response.json()).then((data) => {
-            console.log(this);
-            console.log(data);
+            if (data.status){
+                this.templates.close();
+                this.templates.open(elem.dataset.ok);
+            }
         });
     }
 
@@ -452,4 +467,26 @@ window.addEventListener('load', function () {
     }
 
 });
-//# sourceMappingURL=script.js.map
+class Templates {
+    constructor() {
+        this.content = document.querySelector('#templates').content;
+    }
+
+    html(name) {
+        return this.content.querySelector(`#${name}`).innerHTML;
+    }
+
+    close() {
+        $.fancybox.close();
+    }
+
+    open(name, opt = {}) {
+        $.fancybox.open(this.html(name), opt);
+    }
+
+    get current() {
+        return $.fancybox.getInstance().current.$content;
+    }
+}
+
+const templates = new Templates();

@@ -15,6 +15,7 @@
     <!-- Для изменений после верстки-->
     <link rel="stylesheet" href="/css/custom.css">
     <script defer src="/js/libs.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script defer src="/js/script.js"></script>
     <!-- Для изменений после верстки-->
     <script defer src="/js/custom.js"></script>
@@ -335,7 +336,7 @@
                   </div>
                   <div class="form__accept">
                     <label class="accept">
-                      <input class="accept__input" type="checkbox" name="accept" checked><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <input class="accept__input" type="checkbox" name="accept" checked required><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 8.68L5.5 13L18 1" stroke="#1B4ED1" stroke-width="2"/>
 </svg></span><span class="accept__content">Я принимаю условия <a href="/">Пользовательского соглашения</a> <br>и согласен с <a href="/">Политикой конфиденциальности</a></span></span>
                     </label>
@@ -388,5 +389,139 @@
         </footer>
       </div>
     </div><a class="up" href="#feed" data-event="scrollTo">Оставить заявку</a>
+    <template id="templates">
+      <div id="reg">
+        <form class="reg__form form" action="/php/ajax.php" method="post" data-event="sendForm" data-ok="regThanks">
+          <button class="form__close" type="button" data-event="closeForm"><svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.4335 20.9723L31.6668 30.2057V32.639H29.2335L20.0002 23.4057L10.7668 32.639H8.3335V30.2057L17.5668 20.9723L8.3335 11.739V9.30566H10.7668L20.0002 18.539L29.2335 9.30566H31.6668V11.739L22.4335 20.9723Z" fill="currentColor"/>
+</svg>
+          </button>
+          <h3 class="form__title h3">Чтобы <span class="color-blue">подать заявку на участие</span> в мероприятии, проверьте данные анкеты и подтвердите участие</h3>
+          <div class="form__grid">
+            <div class="form__col">
+              <div class="form__items">
+                <div class="form__item">
+                  <div class="form__label">*ФИО</div>
+                  <input class="form__input" type="text" name="name" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">Эл. Почта</div>
+                  <input class="form__input" type="email" name="email">
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Телефон</div>
+                  <input class="form__input" type="tel" name="tel" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Регион/Город</div>
+                  <input class="form__input" type="text" name="city" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Цель посещения мероприятия</div>
+                  <textarea class="form__input form__input--area" name="city" required></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form__col">
+              <div class="form__items">
+                <div class="form__item">
+                  <div class="form__label">*Название компании</div>
+                  <input class="form__input" type="text" name="company" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Отрасль</div>
+                  <div class="form__select-field">
+                    <select class="form__select" name="industry" required>
+                      <option value="" selected disabled>Выберите</option>
+                      <option value="PR / маркетинг / Event / Реклама">PR / маркетинг / Event / Реклама</option>
+                      <option value="Авиационная промышленность / Судостроение">Авиационная промышленность / Судостроение</option>
+                      <option value="Военная промышленность">Военная промышленность</option>
+                      <option value="Государственные и социальные структуры">Государственные и социальные структуры</option>
+                      <option value="Добыча полезных ископаемых">Добыча полезных ископаемых</option>
+                      <option value="ЖКХ / Сервисные и бытовые услуги">ЖКХ / Сервисные и бытовые услуги</option>
+                      <option value="Здравоохранение">Здравоохранение</option>
+                      <option value="ИТ в промышленности">ИТ в промышленности</option>
+                      <option value="Легкая промышленность">Легкая промышленность</option>
+                      <option value="Лесная / Деревообрабатывающая промышленность">Лесная / Деревообрабатывающая промышленность</option>
+                      <option value="Машиностроение / Приборостроение">Машиностроение / Приборостроение</option>
+                      <option value="Металлургия">Металлургия</option>
+                      <option value="Наука / Образование / НИОКР">Наука / Образование / НИОКР</option>
+                      <option value="Нефть / Газ">Нефть / Газ</option>
+                      <option value="Продукты питания / Одежда">Продукты питания / Одежда</option>
+                      <option value="Производство ПО">Производство ПО</option>
+                      <option value="Розница">Розница</option>
+                      <option value="Системный интегратор">Системный интегратор</option>
+                      <option value="СМИ / Интернет / Полиграфия">СМИ / Интернет / Полиграфия</option>
+                      <option value="Спорт / Отдых / Развлечение">Спорт / Отдых / Развлечение</option>
+                      <option value="Страхование">Страхование</option>
+                      <option value="Строительство / Недвижимость">Строительство / Недвижимость</option>
+                      <option value="Телекоммуникации / Связь ">Телекоммуникации / Связь </option>
+                      <option value="Услуги / Логистика / Перевозки">Услуги / Логистика / Перевозки</option>
+                      <option value="Финансы / Банки">Финансы / Банки</option>
+                      <option value="Химическая промышленность">Химическая промышленность</option>
+                      <option value="Энергетика">Энергетика</option>
+                      <option value="Юридические / Финансовые / Бизнес-услуги">Юридические / Финансовые / Бизнес-услуги</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Количество сотрудников в компании</div>
+                  <div class="form__select-field">
+                    <select class="form__select" name="count" required>
+                      <option value="" selected disabled>Выберите</option>
+                      <option value="до 100">до 100</option>
+                      <option value="101-500">101-500</option>
+                      <option value="501-1000">501-1000</option>
+                      <option value="1001-3000">1001-3000</option>
+                      <option value="более 3000">более 3000</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Должность</div>
+                  <input class="form__input" type="text" name="job" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Корпоративная эл. почта</div>
+                  <input class="form__input" type="email" name="corpEmail" required>
+                </div>
+                <div class="form__item">
+                  <div class="form__label">*Сайт компании</div>
+                  <input class="form__input" type="url" name="site" required>
+                </div>
+              </div>
+            </div>
+            <div class="form__col">
+              <div class="form__accept-2">
+                <label class="accept">
+                  <input class="accept__input" type="checkbox" name="accept" checked required><span class="accept__fake"><span class="accept__check"><svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 8.68L5.5 13L18 1" stroke="#1B4ED1" stroke-width="2"/>
+</svg></span><span class="accept__content">Я принимаю условия <a href="/">Пользовательского соглашения</a> <br>и согласен с <a href="/">Политикой конфиденциальности</a></span></span>
+                </label>
+              </div>
+              <div class="form__captcha">
+                <input class="form__captcha-input" type="text" name="recaptcha" required>
+                <div class="g-recaptcha" data-sitekey="6LeIfkcUAAAAAGYkbh9pFWf618nDNB4weORfho_o"></div>
+              </div>
+            </div>
+            <div class="form__col">
+              <div class="form__item">
+                <div class="form__label">Информация о компании</div>
+                <textarea class="form__input form__input--area" name="about"></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="form__submit btn" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+      <div id="regThanks">
+        <div class="form thanksForm">
+          <div class="form__title h3">Ваша заявка отправлена!</div>
+          <button class="form__btn btn" type="button" data-event="closeForm">Закрыть</button>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

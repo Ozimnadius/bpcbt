@@ -12,4 +12,5 @@
 // @prepros-append components/filter/script.js
 // @prepros-append components/feed/script.js
 // @prepros-append components/event-archive/script.js
+// @prepros-append components/templates/script.js
 
